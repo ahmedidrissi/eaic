@@ -1,10 +1,11 @@
-import DCD_logo_inverted from "../../assets/DCD_logo_inverted.png";
-import ENSIAS_AI_Club_logo_white_text from "../../assets/ENSIAS_AI_Club_logo_white_text.png";
-import x from "../../assets/x.png";
+import DCD_logo_inverted from "../../../assets/DCD_logo_inverted.png";
+import ENSIAS_AI_Club_logo_white_text from "../../../assets/ENSIAS_AI_Club_logo_white_text.png";
+import x from "../../../assets/x.png";
+import "./NavBar.css";
 
 function NavBar() {
   return (
-    <div className="navbar navbar-expand-lg bg-dark navbar-dark px-3">
+    <div className="navbar navbar-expand-lg px-3">
       <div className="container-fluid">
         <a className="navbar-brand ms-lg-5" href="#">
           <img
