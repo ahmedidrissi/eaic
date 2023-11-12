@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='bg-dark text-light'>
         <Home />
       </div>
     </>
