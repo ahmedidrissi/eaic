@@ -1,12 +1,8 @@
-import NavBar from "../shared/navbar/NavBar";
-import Footer from "../shared/footer/Footer";
 import "./Home.css";
 
 function Home() {
   return (
     <>
-      <NavBar />
-
       <section className="section hero" aria-label="home" id="home">
         <div className="container mt-5">
           <h1 className="hero-title">
@@ -20,8 +16,6 @@ function Home() {
           </a>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }
