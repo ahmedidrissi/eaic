@@ -5,7 +5,7 @@ function Footer() {
   const year = 2023;
 
   return (
-    <footer className="">
+    <footer className="container-fluid">
       <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-6 py-5 border-top bg-dark text-light">
         <div className="col mb-3"></div>
 
