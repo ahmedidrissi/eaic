@@ -8,7 +8,7 @@ function Home() {
       <NavBar />
 
       <section className="section hero" aria-label="home" id="home">
-        <div className="container">
+        <div className="container mt-5">
           <h1 className="hero-title">
             Welcome to <span className="span">ENSIAS AI Club </span>
           </h1>
