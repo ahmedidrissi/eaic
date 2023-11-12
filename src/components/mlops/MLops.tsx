@@ -1,14 +1,14 @@
-function Contact() {
+function MLops() {
   return (
     <>
-      <section className="section contact" aria-label="contact" id="contact">
+      <section className="section mlops" aria-label="mlops" id="mlops">
         <div className="container">
           <div className="title-wrapper">
             <h2
               className="headline-md section-title text-center"
               id="collection-label"
             >
-              Contact Us
+              MLops session
             </h2>
           </div>
           <p style={{ textAlign: "justify", fontSize: "15pt" }}>
@@ -23,4 +23,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default MLops;
