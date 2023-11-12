@@ -1,51 +1,29 @@
-import NavBar from "../shared/NavBar"
-import Footer from "../shared/Footer"
+import NavBar from "../shared/navbar/NavBar";
+import Footer from "../shared/footer/Footer";
+import "./Home.css";
 
 function Home() {
   return (
     <>
       <NavBar />
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <h1>Home</h1>
-          </div>
+
+      <section className="section hero" aria-label="home" id="home">
+        <div className="container">
+          <h1 className="hero-title">
+            Welcome to <span className="span">ENSIAS AI Club </span>
+          </h1>
+
+          <p className="section-text">Where ideas become Reality</p>
+
+          <a href="/about" className="btn">
+            Who are we?
+          </a>
         </div>
-        <div className="row">
-          <div className="col">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos. Quisquam
-              quia, voluptatum, voluptates, quibusdam quidem voluptate
-              repellendus voluptas voluptatibus natus autem quos.
-            </p>
-          </div>
-        </div>
-      </div>
+      </section>
+
       <Footer />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
