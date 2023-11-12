@@ -1,0 +1,15 @@
+.navbar {
+    background-color: var(--navbar-bg-color) !important;
+    color: var(--main-text-color) !important;
+}
+
+.navbar-toggler {
+    border: none !important
+}
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus, .navbar-toggler-icon:active {
+    box-shadow: none !important;
+}
+
+.navbar ul li a{
+    color: white !important;
+}
