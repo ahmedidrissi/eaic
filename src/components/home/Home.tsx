@@ -3,6 +3,8 @@ import ParticlesBackground from "../shared/particles/ParticlesBackground";
 import "./Home.css";
 
 function Home() {
+  const baseUrl = "/eaic-react-app/";
+
   return (
     <>
       <ParticlesBackground />
@@ -14,7 +16,7 @@ function Home() {
 
           <p className="section-text">Where ideas become Reality</p>
 
-          <Link className="btn btn-primary" to="/about">
+          <Link className="btn" to={baseUrl + "about"}>
             Who are we?
           </Link>
         </div>

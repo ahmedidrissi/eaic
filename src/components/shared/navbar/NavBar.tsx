@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
+  const baseUrl = '/eaic-react-app/';
+
   return (
     <div className="navbar fixed-top navbar-expand-lg px-3">
       <div className="container-fluid">
         <div className="navbar-brand ms-lg-5">
           <Link
-            to="/"
+            to={baseUrl}
             style={{ textDecoration: "none" }}
           >
             <img
@@ -51,32 +53,32 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to={baseUrl}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link" to={baseUrl + "about"}>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/data">
+              <Link className="nav-link" to={baseUrl + "data"}>
                 Data
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/training">
+              <Link className="nav-link" to={baseUrl + "training"}>
                 Training
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/mlops">
+              <Link className="nav-link" to={baseUrl + "mlops"}>
                 MLops
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">
+              <Link className="nav-link" to={baseUrl + "contact"}>
                 Contact
               </Link>
             </li>
