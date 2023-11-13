@@ -5,16 +5,16 @@ import Footer from "./shared/footer/Footer";
 function Layout() {
   return (
     <>
-        <div
-            style={{
-            backgroundColor: "var(--main-bg-color)",
-            color: "var(--main-text-color)",
-            }}
-        >
-            <NavBar />
-            <Outlet />
-            <Footer />
-        </div>
+      <div
+        style={{
+          backgroundColor: "var(--main-bg-color)",
+          color: "var(--main-text-color)",
+        }}
+      >
+        <NavBar />
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 }
