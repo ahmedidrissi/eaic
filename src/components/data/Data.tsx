@@ -1,4 +1,20 @@
+import { useEffect, useState } from "react";
+import Session from "../shared/session/Session";
+
 function Data() {
+
+  const [dataSessions, setDataSessions] = useState([]);
+
+  useEffect(() => {
+    fetch("sessions/data.json", {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setDataSessions(data.sessions);
+      });
+  }, []);
+  
   return (
     <>
       <section className="section data" aria-label="data" id="data">
@@ -11,13 +27,14 @@ function Data() {
               Data session
             </h2>
           </div>
-          <p style={{ textAlign: "justify", fontSize: "15pt" }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel
-            numquam quo reiciendis? Vel expedita quam doloremque accusantium
-            omnis alias tempora, eligendi porro quibusdam delectus sint facilis
-            ullam iste labore.
-          </p>
+          <div className="row">
+            {dataSessions.map((session: any) => (
+              <div className="col-md-4" key={session.id}>
+                <Session {...session} />
+              </div>
+            ))}
         </div>
+      </div>
       </section>
     </>
   );
