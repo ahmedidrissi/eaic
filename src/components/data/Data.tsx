@@ -12,6 +12,7 @@ function Data() {
       .then((response) => response.json())
       .then((data) => {
         setDataSessions(data.sessions);
+        console.log(data.sessions);
       });
   }, []);
   
@@ -19,7 +20,7 @@ function Data() {
     <>
       <section className="section data" aria-label="data" id="data">
         <div className="container">
-          <div className="title-wrapper">
+          <div className="title-wrapper mb-4">
             <h2
               className="headline-md section-title text-center"
               id="collection-label"
@@ -29,7 +30,7 @@ function Data() {
           </div>
           <div className="row">
             {dataSessions.map((session: any) => (
-              <div className="col-md-4" key={session.id}>
+              <div className="col-lg-3 col-md-4 col-sm-6" key={session.id}>
                 <Session {...session} />
               </div>
             ))}
