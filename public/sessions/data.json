@@ -1,0 +1,123 @@
+{
+    "sessions": [
+        {
+            "id": 1,
+            "name": "Session 1",
+            "cell": "Data",
+            "type": "Formation",
+            "image": "",
+            "speakers": [
+                {
+                    "id": 1,
+                    "name": "Speaker 1"
+                },
+                {
+                    "id": 2,
+                    "name": "Speaker 2"
+                }
+            ],
+            "tags": [
+                "tag1",
+                "tag2",
+                "tag3"
+            ],
+            "academic-year": "2022-2023"
+        },
+        {
+            "id": 2,
+            "name": "Session 2",
+            "cell": "Data",
+            "type": "Formation",
+            "image": "",
+            "speakers": [
+                {
+                    "id": 1,
+                    "name": "Speaker 1"
+                },
+                {
+                    "id": 2,
+                    "name": "Speaker 2"
+                }
+            ],
+            "tags": [
+                "tag1",
+                "tag2",
+                "tag3"
+            ],
+            "academic-year": "2022-2023"
+
+        },
+        {
+            "id": 3,
+            "name": "Session 3",
+            "cell": "Data",
+            "type": "Formation",
+            "image": "",
+            "speakers": [
+                {
+                    "id": 1,
+                    "name": "Speaker 1"
+                },
+                {
+                    "id": 2,
+                    "name": "Speaker 2"
+                }
+            ],
+            "tags": [
+                "tag1",
+                "tag2",
+                "tag3"
+            ],
+            "academic-year": "2022-2023"
+
+        },
+        {
+            "id": 4,
+            "name": "Session 4",
+            "cell": "Data",
+            "type": "Formation",
+            "image": "",
+            "speakers": [
+                {
+                    "id": 1,
+                    "name": "Speaker 1"
+                },
+                {
+                    "id": 2,
+                    "name": "Speaker 2"
+                }
+            ],
+            "tags": [
+                "tag1",
+                "tag2",
+                "tag3"
+            ],
+            "academic-year": "2022-2023"
+
+        },
+        {
+            "id": 5,
+            "name": "Session 5",
+            "cell": "Data",
+            "type": "Formation",
+            "image": "",
+            "speakers": [
+                {
+                    "id": 1,
+                    "name": "Speaker 1"
+                },
+                {
+                    "id": 2,
+                    "name": "Speaker 2"
+                }
+            ],
+            "tags": [
+                "tag1",
+                "tag2",
+                "tag3"
+            ],
+            "academic-year": "2022-2023"
+
+        }
+    ]
+}
