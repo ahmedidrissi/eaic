@@ -2,3 +2,12 @@
     background-color: var(--color-2) !important;
     /* min-height: 450px; */
 }
+
+.card-header h6 {
+    text-transform: uppercase;
+}
+
+.card-footer button {
+    background-color: var(--color-6) !important;
+    color: var(--main-text-color) !important;
+}
