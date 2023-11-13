@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
+import ParticlesBackground from "../shared/particles/ParticlesBackground";
 import "./Home.css";
 
 function Home() {
   return (
     <>
+      <ParticlesBackground />
       <section className="section hero" aria-label="home" id="home">
         <div className="container mt-5">
           <h1 className="hero-title">
@@ -11,9 +14,9 @@ function Home() {
 
           <p className="section-text">Where ideas become Reality</p>
 
-          <a href="/about" className="btn">
+          <Link className="btn btn-primary" to="/about">
             Who are we?
-          </a>
+          </Link>
         </div>
       </section>
     </>
