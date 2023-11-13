@@ -1,6 +1,7 @@
 footer {
     background-color: var(--footer-bg-color) !important;
     color: var(--main-text-color);
+    position: relative;
 }
 
 footer a {
