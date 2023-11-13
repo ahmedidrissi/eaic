@@ -25,7 +25,7 @@ function Data() {
               className="headline-md section-title text-center"
               id="collection-label"
             >
-              Data session
+              Data Sessions
             </h2>
           </div>
           <div className="row">
