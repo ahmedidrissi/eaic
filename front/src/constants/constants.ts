@@ -1,3 +1,4 @@
 export const constants = {
-    basePath: "/"
+    basePath: "/",
+    apiUrl: "http://localhost:5000/sessions"
 };
