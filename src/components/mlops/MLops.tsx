@@ -1,4 +1,4 @@
-function MLops() {
+function MLOps() {
   return (
     <>
       <section className="section mlops" aria-label="mlops" id="mlops">
@@ -8,7 +8,7 @@ function MLops() {
               className="headline-md section-title text-center"
               id="collection-label"
             >
-              MLops session
+              MLOps sessions
             </h2>
           </div>
           <p style={{ textAlign: "justify", fontSize: "15pt" }}>
@@ -23,4 +23,4 @@ function MLops() {
   );
 }
 
-export default MLops;
+export default MLOps;

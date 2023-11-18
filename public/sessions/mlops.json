@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Session 1",
-            "cell": "MLops",
+            "cell": "MLOps",
             "type": "Formation",
             "image": "",
             "speakers": [
@@ -26,7 +26,7 @@
         {
             "id": 2,
             "title": "Session 2",
-            "cell": "MLops",
+            "cell": "MLOps",
             "type": "Formation",
             "image": "",
             "speakers": [
@@ -50,7 +50,7 @@
         {
             "id": 3,
             "title": "Session 3",
-            "cell": "MLops",
+            "cell": "MLOps",
             "type": "Formation",
             "image": "",
             "speakers": [
@@ -74,7 +74,7 @@
         {
             "id": 4,
             "title": "Session 4",
-            "cell": "MLops",
+            "cell": "MLOps",
             "type": "Formation",
             "image": "",
             "speakers": [
@@ -98,7 +98,7 @@
         {
             "id": 5,
             "title": "Session 5",
-            "cell": "MLops",
+            "cell": "MLOps",
             "type": "Formation",
             "image": "",
             "speakers": [
