@@ -1,35 +1,29 @@
-const dotenv = require('dotenv');
-const express = require('express');
-const mongoose = require('mongoose');
-
-dotenv.config();
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+require("dotenv/config");
 
 const app = express();
 const port = process.env.PORT || 5000;
 const db_uri = process.env.DB_URI;
 
-// // Connect to MongoDB
-// mongoose.connect(db_uri, { useNewUrlParser: true, useUnifiedTopology: true });
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// // Create a schema
-// const yourSchema = new mongoose.Schema({
-//     name: String,
-//     age: Number
-// });
+const corsOptions = {
+  origin: "*",
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
 
-// // Create a model
-// const YourModel = mongoose.model('YourModel', yourSchema);
+app.use(cors(corsOptions));
 
-// // Route for fetching data
-// app.get('/api/data', async (req, res) => {
-//   try {
-//     const data = await YourModel.find();
-//     res.json(data);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Internal Server Error' });
-//   }
-// });
+const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
+mongoose.connect(db_uri, dbOptions)
+.then(() => console.log("Connected to MongoDB"))
+.catch((err) => console.log(err));
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
