@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import ParticlesBackground from "../shared/particles/ParticlesBackground";
+import { constants } from "../../constants/constants";
 import "./Home.css";
 
 function Home() {
-  const baseUrl = "/eaic-react-app/";
+  const basePath = constants.basePath;
 
   return (
     <>
@@ -16,7 +17,7 @@ function Home() {
 
           <p className="section-text">Where ideas become Reality</p>
 
-          <Link className="btn" to={baseUrl + "about"}>
+          <Link className="btn" to={basePath + "about"}>
             Who are we?
           </Link>
         </div>

@@ -2,17 +2,18 @@ import DCD_logo_inverted from "../../../assets/DCD_logo_inverted.png";
 import ENSIAS_AI_Club_logo_white_text from "../../../assets/ENSIAS_AI_Club_logo_white_text.png";
 import x from "../../../assets/x.png";
 import { Link } from "react-router-dom";
+import { constants } from "../../../constants/constants";
 import "./NavBar.css";
 
 function NavBar() {
-  const baseUrl = '/eaic-react-app/';
+  const basePath = constants.basePath;
 
   return (
     <div className="navbar fixed-top navbar-expand-lg px-3">
       <div className="container-fluid">
         <div className="navbar-brand ms-lg-5">
           <Link
-            to={baseUrl}
+            to={basePath}
             style={{ textDecoration: "none" }}
           >
             <img
@@ -53,32 +54,32 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to={baseUrl}>
+              <Link className="nav-link" to={basePath}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={baseUrl + "about"}>
+              <Link className="nav-link" to={basePath + "about"}>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={baseUrl + "data"}>
+              <Link className="nav-link" to={basePath + "data"}>
                 Data
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={baseUrl + "training"}>
+              <Link className="nav-link" to={basePath + "training"}>
                 Training
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={baseUrl + "mlops"}>
+              <Link className="nav-link" to={basePath + "mlops"}>
                 MLops
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={baseUrl + "contact"}>
+              <Link className="nav-link" to={basePath + "contact"}>
                 Contact
               </Link>
             </li>
