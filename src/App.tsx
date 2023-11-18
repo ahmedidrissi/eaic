@@ -14,13 +14,13 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/eaic-react-app/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/eaic-react-app/about" element={<About />}/>
-            <Route path="/eaic-react-app/contact" element={<Contact />} />
-            <Route path="/eaic-react-app/data" element={<Data />} />
-            <Route path="/eaic-react-app/training" element={<Training />} />
-            <Route path="/eaic-react-app/mlops" element={<MLOps />} />
+            <Route path="/about" element={<About />}/>
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/data" element={<Data />} />
+            <Route path="/training" element={<Training />} />
+            <Route path="/mlops" element={<MLOps />} />
           </Route>
         </Routes>
       </Router>
