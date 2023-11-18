@@ -1,21 +1,25 @@
 import { useEffect, useState } from "react";
 import Session from "../shared/session/Session";
+import { constants } from "../../constants/constants";
 
 function Data() {
+  const apiUrl = constants.apiUrl;
 
   const [dataSessions, setDataSessions] = useState([]);
 
   useEffect(() => {
-    fetch("sessions/data.json", {
+    fetch(apiUrl, {
       method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
       .then((response) => response.json())
       .then((data) => {
-        setDataSessions(data.sessions);
-        console.log(data.sessions);
+        setDataSessions(data);
       });
   }, []);
-  
+
   return (
     <>
       <section className="section data" aria-label="data" id="data">
@@ -28,14 +32,23 @@ function Data() {
               Data Sessions
             </h2>
           </div>
-          <div className="row">
+          {/* check if dataSessions is empty */}
+          {dataSessions.length > 0 ? (
+            <div className="row">
             {dataSessions.map((session: any) => (
-              <div className="col-lg-3 col-md-4 col-sm-6" key={session.id}>
+              <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
                 <Session {...session} />
               </div>
             ))}
+          </div>
+          ) : (
+            <div className="row">
+              <div className="col-12">
+                <p className="text-center text-light">No data sessions available</p>
+              </div>
+            </div>
+          )}
         </div>
-      </div>
       </section>
     </>
   );
