@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const schemas = require("./models/schemas");
 const mongoose = require("mongoose");
 require("dotenv/config");
 
@@ -20,9 +21,40 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
-mongoose.connect(db_uri, dbOptions)
-.then(() => console.log("Connected to MongoDB"))
-.catch((err) => console.log(err));
+mongoose
+  .connect(db_uri, dbOptions)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((err) => console.log(err));
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+// app.post("/sessions", async (req, res) => {
+//   const sessionData = req.body;
+//   const newSession = new schemas.Sessions(sessionData);
+//   const saveSession = await newSession.save();
+
+//   if (saveSession) {
+//     res.status(200).json({ message: "Session added successfully" });
+//   } else {
+//     res.status(400).json({ message: "Error adding session" });
+//   }
+
+//   res.end();
+// });
+
+app.get("/sessions", async (req, res) => {
+  const sessions = await schemas.Sessions.find().exec();
+
+  if (sessions) {
+    res.status(200).json(sessions);
+  } else {
+    res.status(400).json({ message: "Error fetching sessions" });
+  }
+});
 
 const server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
