@@ -28,7 +28,7 @@ mongoose
   })
   .catch((err) => console.log(err));
 
-app.get("/", (req, res) => {
+app.get("/api/v1", (req, res) => {
   res.send("Hello from ENSIAS AI Club");
 });
 
@@ -46,8 +46,19 @@ app.get("/", (req, res) => {
 //   res.end();
 // });
 
-app.get("/sessions", async (req, res) => {
+app.get("/api/v1/sessions", async (req, res) => {
   const sessions = await schemas.Sessions.find().exec();
+
+  if (sessions) {
+    res.status(200).json(sessions);
+  } else {
+    res.status(400).json({ message: "Error fetching sessions" });
+  }
+});
+
+app.get("/api/v1/sessions/cell/:cell", async (req, res) => {
+  const cell = req.params.cell;
+  const sessions = await schemas.Sessions.find({ cell: cell }).exec();
 
   if (sessions) {
     res.status(200).json(sessions);
