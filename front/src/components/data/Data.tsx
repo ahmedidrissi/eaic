@@ -44,7 +44,7 @@ function Data() {
           ) : (
             <div className="row">
               <div className="col-12">
-                <p className="text-center text-light">No data sessions available</p>
+                <p className="text-center text-light">No Data Sessions Available</p>
               </div>
             </div>
           )}
