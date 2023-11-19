@@ -9,7 +9,7 @@ function NavBar() {
   const basePath = constants.basePath;
 
   return (
-    <div className="navbar fixed-top navbar-expand-lg px-3">
+    <div className="navbar fixed-top navbar-expand-lg navbar-dark px-3">
       <div className="container-fluid">
         <div className="navbar-brand ms-lg-5">
           <Link
@@ -19,7 +19,7 @@ function NavBar() {
             <img
               src={ENSIAS_AI_Club_logo_white_text}
               alt="ENSIAS AI Club"
-              width="130"
+              width="125"
               className="d-inline-block align-text-center"
             />
           </Link>
@@ -27,15 +27,15 @@ function NavBar() {
             <img
               src={x}
               alt=""
-              width="40"
-              className="d-inline-block align-text-center me-3"
+              width="30"
+              className="d-inline-block align-text-center me-3 x"
             />
           </a>
           <a href="https://www.datacamp.com/donates" target="_blank">
             <img
               src={DCD_logo_inverted}
               alt="DataCamp Donates"
-              width="126"
+              width="120"
               className="d-inline-block align-text-center"
             />
           </a>

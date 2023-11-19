@@ -13,3 +13,12 @@
 .navbar ul li a{
     color: white !important;
 }
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        transform: scale(0.8);
+    }
+    .navbar-brand .x {
+        display: none !important;
+    }
+}
