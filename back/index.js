@@ -29,7 +29,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello from ENSIAS AI Club");
 });
 
 // app.post("/sessions", async (req, res) => {
