@@ -5,15 +5,11 @@ function About() {
     <>
       <section className="section about" aria-label="about" id="about">
         <div className="container">
-          <div className="title-wrapper">
-            <h2
-              className="headline-md section-title text-center"
-              id="collection-label"
-            >
-              About Us
-            </h2>
-          </div>
-          <p style={{ textAlign: "justify", fontSize: "15pt" }}>
+          <h2 className="text-center">About Us</h2>
+          <p
+            style={{ textAlign: "justify", fontSize: "15pt" }}
+            className="px-5 py-3"
+          >
             We are a group of Moroccan university students passionate about
             Artificial Intelligence (AI). Our club is dedicated to exploring the
             many possibilities of AI and its applications in a wide range of
@@ -25,6 +21,35 @@ function About() {
             forward to creating a community of like-minded individuals who are
             eager to learn and share their insights.
           </p>
+          {/* <h2 className="text-center">Q&A</h2>
+          <div className="container p-3 d-flex justify-content-center">
+            <div className="accordion" id="qna">
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#qnaOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    What is our motivation ?
+                  </button>
+                </h2>
+                <div
+                  id="qnaOne"
+                  className="accordion-collapse collapse show"
+                  data-bs-parent="#qna"
+                >
+                  <div className="accordion-body">
+                    We want to spread the AI culture through our campus and
+                    create a safe and motivating environment for AI enthusiasts.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> */}
         </div>
       </section>
     </>

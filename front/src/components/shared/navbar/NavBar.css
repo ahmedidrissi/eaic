@@ -6,6 +6,9 @@
 .navbar-toggler {
     border: none !important
 }
+.navbar-toggler-icon {
+    font-size: 15px;
+}
 .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus, .navbar-toggler-icon:active {
     box-shadow: none !important;
 }
@@ -18,7 +21,10 @@
     .navbar-brand img {
         transform: scale(0.8);
     }
-    .navbar-brand .x {
+    .navbar-brand .x-logo {
         display: none !important;
+    }
+    .navbar-brand .dcd-logo {
+        margin-left: -10px;
     }
 }

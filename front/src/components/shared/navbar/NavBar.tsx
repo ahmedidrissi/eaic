@@ -23,15 +23,15 @@ function NavBar() {
               className="d-inline-block align-text-center"
             />
           </Link>
-          <a>
+          <a className="x-logo">
             <img
               src={x}
               alt=""
               width="30"
-              className="d-inline-block align-text-center me-3 x"
+              className="d-inline-block align-text-center me-3"
             />
           </a>
-          <a href="https://www.datacamp.com/donates" target="_blank">
+          <a href="https://www.datacamp.com/donates" target="_blank" className="dcd-logo">
             <img
               src={DCD_logo_inverted}
               alt="DataCamp Donates"

@@ -1,0 +1,7 @@
+.accordion {
+    max-width: 600px;
+}
+
+.accordion-item {
+    background-color: var(--color-6) !important;
+}
