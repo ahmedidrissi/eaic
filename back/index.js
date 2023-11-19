@@ -21,12 +21,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
-mongoose
-  .connect(db_uri, dbOptions)
-  .then(() => {
-    console.log("Connected to MongoDB");
-  })
-  .catch((err) => console.log(err));
+mongoose.connect(db_uri, dbOptions).then(() => {
+  console.log("Connected to MongoDB");
+});
 
 app.get("/api/v1", (req, res) => {
   res.send("Hello from ENSIAS AI Club");
