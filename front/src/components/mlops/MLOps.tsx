@@ -8,7 +8,7 @@ function MLOps() {
   const [mlopsSessions, setMlopsSessions] = useState([]);
 
   useEffect(() => {
-    fetch(apiUrl, {
+    fetch(`${apiUrl}/sessions/cell/MLOps`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -16,6 +16,9 @@ function MLOps() {
     })
       .then((response) => response.json())
       .then((data) => {
+        data.sort((a: any, b: any) => {
+          return b.academicYear - a.academicYear;
+        });
         setMlopsSessions(data);
       });
   }, []);
@@ -32,7 +35,6 @@ function MLOps() {
               MLOps Sessions
             </h2>
           </div>
-          {/* check if dataSessions is empty */}
           {mlopsSessions.length > 0 ? (
             <div className="row">
             {mlopsSessions.map((session: any) => (

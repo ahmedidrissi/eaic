@@ -8,7 +8,7 @@ function Training() {
   const [trainingSessions, setTrainingSessions] = useState([]);
 
   useEffect(() => {
-    fetch(apiUrl, {
+    fetch(`${apiUrl}/sessions/cell/Training`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -16,6 +16,9 @@ function Training() {
     })
       .then((response) => response.json())
       .then((data) => {
+        data.sort((a: any, b: any) => {
+          return b.academicYear - a.academicYear;
+        });
         setTrainingSessions(data);
       });
   }, []);
@@ -32,7 +35,6 @@ function Training() {
               Training Sessions
             </h2>
           </div>
-          {/* check if dataSessions is empty */}
           {trainingSessions.length > 0 ? (
             <div className="row">
             {trainingSessions.map((session: any) => (

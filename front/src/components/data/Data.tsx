@@ -7,8 +7,9 @@ function Data() {
 
   const [dataSessions, setDataSessions] = useState([]);
 
+  // get sessions by cell
   useEffect(() => {
-    fetch(apiUrl, {
+    fetch(`${apiUrl}/sessions/cell/Data`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -16,6 +17,9 @@ function Data() {
     })
       .then((response) => response.json())
       .then((data) => {
+        data.sort((a: any, b: any) => {
+          return b.academicYear - a.academicYear;
+        });
         setDataSessions(data);
       });
   }, []);
@@ -32,7 +36,6 @@ function Data() {
               Data Sessions
             </h2>
           </div>
-          {/* check if dataSessions is empty */}
           {dataSessions.length > 0 ? (
             <div className="row">
             {dataSessions.map((session: any) => (
