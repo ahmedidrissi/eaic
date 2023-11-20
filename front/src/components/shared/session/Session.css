@@ -1,7 +1,9 @@
 .card {
+    position: relative;
     background-color: var(--color-2) !important;
     min-height: 60vh;
     transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
 .card:hover {
     box-shadow: 0 0 10px var(--color-6) !important;
@@ -28,24 +30,31 @@
     transition: all 0.5s ease-in-out;
 }
 
-@keyframes placeHolderShimmer{
+@-webkit-keyframes shimmer{
     0%{
-        background-position: -468px 0
+        background-position: -100% 0
     }
     100%{
-        background-position: 468px 0
+        background-position: 100% 0
     }
 }
 
-.animated-background {
-    animation-duration: 1s;
+@keyframes shimmer{
+    0%{
+        background-position: -1200px 0
+    }
+    100%{
+        background-position: 1200px 0
+    }
+}
+
+.shimmerBG {
+    animation-duration: 2.2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    animation-name: placeHolderShimmer;
+    animation-name: shimmer;
     animation-timing-function: linear;
     background: rgba(169, 169, 169, 0.1);
     background: linear-gradient(to right, rgb(237, 237, 237, 0.1) 8%, rgb(222, 222, 222, 0.15) 18%, rgb(238, 238, 238, 0.1) 33%);
-    background-size: 800px 104px;
-    height: 96px;
-    position: relative;
+    background-size: 1200px 100%;
 }
