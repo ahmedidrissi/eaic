@@ -8,8 +8,11 @@ function Contact() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     const name = e.target.name.value;
+    e.target.name.value = "";
     const email = e.target.email.value;
-    const message = e.target.message.value;    
+    e.target.email.value = "";
+    const message = e.target.message.value;  
+    e.target.message.value = "";  
     const data = {
       name,
       email,
