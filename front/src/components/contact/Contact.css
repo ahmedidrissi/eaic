@@ -1,9 +1,11 @@
 .contact-info, .contact-form {
-    background-color: var(--color-6);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    position: relative;
+    backdrop-filter: blur(10px);
 }
 
-input:focus, textarea:focus {
+.contact-form input:focus, .contact-form textarea:focus {
     box-shadow: none !important;
 }
 .contact-form button {
