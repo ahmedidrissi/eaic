@@ -10,6 +10,7 @@ function Session(session: any) {
         src={session.image ? session.image : "https://via.placeholder.com/400"}
         style={{ width: "100%", height: "25vh", objectFit: "cover" }}
         className="card-img-top"
+        loading="lazy"
       />
       <div className="card-body">
         <h5 className="card-title">{session.title}</h5>
