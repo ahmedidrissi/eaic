@@ -14,4 +14,12 @@ const sessionSchema = new Schema({
 
 const Sessions = mongoose.model("Sessions", sessionSchema, "sessions");
 
-module.exports = { Sessions };
+const contactSchema = new Schema({
+    name: {type: String, required: true},
+    email: {type: String, required: true},
+    message: {type: String, required: true}
+});
+
+const Contacts = mongoose.model("Contacts", contactSchema, "contacts");
+
+module.exports = { Sessions , Contacts };
