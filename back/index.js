@@ -23,6 +23,40 @@ app.use(cors(corsOptions));
 const dbOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose.connect(db_uri, dbOptions).then(() => {
   console.log("Connected to MongoDB");
+
+  // // export all sessions to json file
+  // fetch('http://localhost:5000/api/v1/sessions', {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // })
+  // .then((res) => res.json())
+  // .then((data) => {
+  //   const fs = require('fs');
+  //   fs.writeFile('sessions.json', JSON.stringify(data), (err) => {
+  //     if (err) throw err;
+  //     console.log('Sessions saved to sessions.json');
+  //   });
+  // })
+
+  // // post all sessions from json file without _id
+  // const fs = require("fs");
+  // const sessions = JSON.parse(fs.readFileSync("sessions.json", "utf8"));
+  // sessions.forEach((session) => {
+  //   delete session._id;
+  //   fetch("http://localhost:5000/api/v1/sessions", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(session),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //     });
+  // });
 });
 
 app.get("/api/v1", (req, res) => {
@@ -64,7 +98,6 @@ app.get("/api/v1/sessions/cell/:cell", async (req, res) => {
   }
 });
 
-// contact request
 app.post("/api/v1/contact", async (req, res) => {
   const contactData = req.body;
   const newContact = new schemas.Contacts(contactData);
