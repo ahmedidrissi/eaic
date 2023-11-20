@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Session from "../shared/session/Session";
+import ShimmerSession from "../shared/session/ShimmerSession";
 import { constants } from "../../constants/constants";
 
 function Training() {
@@ -37,17 +38,19 @@ function Training() {
           </div>
           {trainingSessions.length > 0 ? (
             <div className="row">
-            {trainingSessions.map((session: any) => (
-              <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
-                <Session {...session} />
-              </div>
-            ))}
-          </div>
+              {trainingSessions.map((session: any) => (
+                <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
+                  <Session {...session} />
+                </div>
+              ))}
+            </div>
           ) : (
             <div className="row">
-              <div className="col-12">
-                <p className="text-center text-light">No Training Sessions Available</p>
-              </div>
+              {[...Array(8)].map((_, index) => (
+                <div className="col-lg-3 col-md-4 col-sm-6" key={index}>
+                  <ShimmerSession />
+                </div>
+              ))}
             </div>
           )}
         </div>
