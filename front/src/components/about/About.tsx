@@ -21,13 +21,13 @@ function About() {
             forward to creating a community of like-minded individuals who are
             eager to learn and share their insights.
           </p>
-          {/* <h2 className="text-center">Q&A</h2>
+          <h2 className="text-center">Q&A</h2>
           <div className="container p-3 d-flex justify-content-center">
             <div className="accordion" id="qna">
-              <div className="accordion-item">
+              <div className="accordion-item mb-1">
                 <h2 className="accordion-header">
                   <button
-                    className="accordion-button"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#qnaOne"
@@ -39,7 +39,7 @@ function About() {
                 </h2>
                 <div
                   id="qnaOne"
-                  className="accordion-collapse collapse show"
+                  className="accordion-collapse collapse"
                   data-bs-parent="#qna"
                 >
                   <div className="accordion-body">
@@ -48,8 +48,55 @@ function About() {
                   </div>
                 </div>
               </div>
+              <div className="accordion-item mb-1">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#qnaTwo"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Where do we work?
+                  </button>
+                </h2>
+                <div
+                  id="qnaTwo"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#qna"
+                >
+                  <div className="accordion-body">
+                    In our school ENSIAS based in Rabat.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#qnaThree"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    How can you help us?
+                  </button>
+                </h2>
+                <div
+                  id="qnaThree"
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#qna"
+                >
+                  <div className="accordion-body">
+                    You can sponsor an event or suggest a formation in a topic
+                    of your choice related to AI.
+                  </div>
+                </div>
+              </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </>
