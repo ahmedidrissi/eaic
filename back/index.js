@@ -3,6 +3,10 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const schemas = require("./models/schemas");
 const mongoose = require("mongoose");
+const mail = require("./mail");
+
+const nodemailer = require("nodemailer");
+
 require("dotenv/config");
 
 const app = express();
@@ -100,13 +104,14 @@ app.get("/api/v1/sessions/cell/:cell", async (req, res) => {
 
 app.post("/api/v1/contact", async (req, res) => {
   const contactData = req.body;
-  const newContact = new schemas.Contacts(contactData);
-  const saveContact = await newContact.save();
-
-  if (saveContact) {
-    res.status(200).json({ message: "Contact added successfully" });
+  name = contactData.name;
+  to = contactData.email;
+  message = contactData.message;
+  const sendMail = await mail.sendContactEmail({name, to, message});
+  if (sendMail) {
+    res.status(200).json({ message: "Mail sent successfully" });
   } else {
-    res.status(400).json({ message: "Error adding contact" });
+    res.status(400).json({ message: "Error" });
   }
 
   res.end();
