@@ -47,7 +47,6 @@ function Contact() {
               Contact Us
             </h2>
           </div>
-          {/* two blocs */}
           <div className="row px-lg-5 py-3">
             <div className="col-md-6">
               <div className="contact-info p-5 mb-2">
