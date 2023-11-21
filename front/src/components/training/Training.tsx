@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Filter from "../shared/filter/Filter";
 import Session from "../shared/session/Session";
 import ShimmerSession from "../shared/session/ShimmerSession";
 import { constants } from "../../constants/constants";
@@ -7,6 +8,7 @@ function Training() {
   const apiUrl = constants.apiUrl;
 
   const [trainingSessions, setTrainingSessions] = useState([]);
+  const [filter, setFilter] = useState([]);
 
   useEffect(() => {
     fetch(`${apiUrl}/sessions/cell/Training`, {
@@ -36,7 +38,20 @@ function Training() {
               Training Sessions
             </h2>
           </div>
-          {trainingSessions.length > 0 ? (
+          <div className="row">
+            <div className="col-md-6 offset-md-3">
+              <Filter data={trainingSessions} setter={setFilter} />
+            </div>
+          </div>
+          {filter.length > 0 ? (
+            <div className="row">
+              {filter.map((session: any) => (
+                <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
+                  <Session {...session} />
+                </div>
+              ))}
+            </div>
+          ) : trainingSessions.length > 0 ? (
             <div className="row">
               {trainingSessions.map((session: any) => (
                 <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>

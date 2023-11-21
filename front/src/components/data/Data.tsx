@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Filter from "../shared/filter/Filter";
 import Session from "../shared/session/Session";
 import ShimmerSession from "../shared/session/ShimmerSession";
 import { constants } from "../../constants/constants";
@@ -7,6 +8,7 @@ function Data() {
   const apiUrl = constants.apiUrl;
 
   const [dataSessions, setDataSessions] = useState([]);
+  const [filter, setFilter] = useState([]);
 
   // get sessions by cell
   useEffect(() => {
@@ -37,7 +39,20 @@ function Data() {
               Data Sessions
             </h2>
           </div>
-          {dataSessions.length > 0 ? (
+          <div className="row">
+            <div className="col-md-6 offset-md-3">
+              <Filter data={dataSessions} setter={setFilter} />
+            </div>
+          </div>
+          {filter.length > 0 ? (
+            <div className="row">
+              {filter.map((session: any) => (
+                <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
+                  <Session {...session} />
+                </div>
+              ))}
+            </div>
+          ) : dataSessions.length > 0 ? (
             <div className="row">
               {dataSessions.map((session: any) => (
                 <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
