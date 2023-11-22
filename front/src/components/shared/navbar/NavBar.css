@@ -15,7 +15,12 @@
 }
 
 .navbar ul li a{
-    color: white !important;
+    color: rgb(219, 219, 219) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--main-text-color) !important;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

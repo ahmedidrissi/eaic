@@ -1,12 +1,14 @@
 import DCD_logo_inverted from "../../../assets/DCD_logo_inverted.png";
 import ENSIAS_AI_Club_logo_white_text from "../../../assets/ENSIAS_AI_Club_logo_white_text.png";
 import x from "../../../assets/x.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { constants } from "../../../constants/constants";
 import "./NavBar.css";
 
 function NavBar() {
   const basePath = constants.basePath;
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
     <div className="navbar fixed-top navbar-expand-lg navbar-dark px-3">
@@ -54,32 +56,32 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link" to={basePath}>
+              <Link className={currentPath == "/" ? "nav-link active" : "nav-link"} to={basePath}>
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={basePath + "about"}>
+              <Link className={currentPath == "/about" ? "nav-link active" : "nav-link"} to={basePath + "about"}>
                 About
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={basePath + "data"}>
+              <Link className={currentPath == "/data" ? "nav-link active" : "nav-link"} to={basePath + "data"}>
                 Data
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={basePath + "training"}>
+              <Link className={currentPath == "/training" ? "nav-link active" : "nav-link"} to={basePath + "training"}>
                 Training
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={basePath + "mlops"}>
+              <Link className={currentPath == "/mlops" ? "nav-link active" : "nav-link"} to={basePath + "mlops"}>
                 MLOps
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={basePath + "contact"}>
+              <Link className={currentPath == "/contact" ? "nav-link active" : "nav-link"} to={basePath + "contact"}>
                 Contact
               </Link>
             </li>
