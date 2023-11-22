@@ -19,9 +19,6 @@ function Training() {
     })
       .then((response) => response.json())
       .then((data) => {
-        data.sort((a: any, b: any) => {
-          return b.academicYear - a.academicYear;
-        });
         setTrainingSessions(data);
       });
   }, []);
