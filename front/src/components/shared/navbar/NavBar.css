@@ -29,10 +29,10 @@
 }
 
 .navbar-toggler>.navbar-toggler-icon-close {
-    display:inline;
+    display:inline !important;
 }
 .navbar-toggler.collapsed>.navbar-toggler-icon-close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
-    display:none;
+    display:none !important;
 }
 
 .navbar ul li a{
