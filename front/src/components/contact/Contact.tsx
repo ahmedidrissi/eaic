@@ -1,18 +1,22 @@
 import { constants } from "../../constants/constants";
+import { useState } from "react";
 import "./Contact.css";
 
 function Contact() {
-
   const apiUrl = constants.apiUrl;
+  const [submitted, setSubmitted] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [failure, setFailure] = useState(false);
 
   const handleSubmit = (e: any) => {
+    setSubmitted(true);
     e.preventDefault();
     const name = e.target.name.value;
     e.target.name.value = "";
     const email = e.target.email.value;
     e.target.email.value = "";
-    const message = e.target.message.value;  
-    e.target.message.value = "";  
+    const message = e.target.message.value;
+    e.target.message.value = "";
     const data = {
       name,
       email,
@@ -27,11 +31,13 @@ function Contact() {
     })
       .then((res) => {
         console.log(res);
-        alert("Your message has been sent successfully");
+        setSubmitted(false);
+        setSuccess(true);
       })
       .catch((err) => {
         console.log(err);
-        alert("Something went wrong, please try again later");
+        setSubmitted(false);
+        setFailure(true);
       });
   };
 
@@ -118,17 +124,76 @@ function Contact() {
                   </div>
                   <div className="form-group">
                     <button
-                      className="btn btn-round px-3"
+                      className={
+                        submitted
+                          ? "btn btn-round disabled px-3"
+                          : "btn btn-round px-3"
+                      }
                       type="submit"
                       name="submit"
                       id="submit"
                       value="Submit"
                     >
-                      Send Message
+                      {submitted ? (
+                        <span>
+                          <span
+                            className="spinner-border spinner-border-sm"
+                            role="status"
+                            aria-hidden="true"
+                          ></span>{" "}
+                          Sending ...
+                        </span>
+                      ) : (
+                        <span>Send Message</span>
+                      )}
                     </button>
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="toast-container position-fixed bottom-0 end-0 p-3">
+          <div
+            className={
+              success
+                ? "toast show align-items-center text-bg-success border-0"
+                : "d-none"
+            }
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div className="d-flex">
+              <div className="toast-body">Message sent successfully</div>
+              <button
+                type="button"
+                className="btn-close btn-close-white me-2 m-auto"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+        </div>
+        <div className="toast-container position-fixed bottom-0 end-0 p-3">
+          <div
+            className={
+              failure
+                ? "toast show align-items-center text-bg-danger border-0"
+                : "d-none"
+            }
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div className="d-flex">
+              <div className="toast-body">Something goes wrong</div>
+              <button
+                type="button"
+                className="btn-close btn-close-white me-2 m-auto"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
             </div>
           </div>
         </div>
