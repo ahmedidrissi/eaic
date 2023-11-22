@@ -2,6 +2,20 @@
     background-color: var(--navbar-bg-color) !important;
     color: var(--main-text-color) !important;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    z-index: 2 !important;
+}
+
+.close-navbar-toggler{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:1 !important;
+    cursor: pointer;
+}
+.close-navbar-toggler.collapsed{
+    z-index:-1 !important;
 }
 
 .navbar-toggler {
@@ -12,6 +26,13 @@
 }
 .navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus, .navbar-toggler-icon:active {
     box-shadow: none !important;
+}
+
+.navbar-toggler>.navbar-toggler-icon-close {
+    display:inline;
+}
+.navbar-toggler.collapsed>.navbar-toggler-icon-close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
 }
 
 .navbar ul li a{
