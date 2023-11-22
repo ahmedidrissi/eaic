@@ -1,7 +1,6 @@
 .contact-info, .contact-form {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    position: relative;
     backdrop-filter: blur(10px);
 }
 
