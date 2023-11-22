@@ -7,10 +7,9 @@ function Footer() {
 
   return (
     <footer className="container-fluid">
-      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-6 py-5 border-top border-dark text-light">
-        <div className="col mb-3"></div>
+      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-5 mx-lg-5 border-top border-dark text-light"> 
 
-        <div className="col mb-3 d-flex flex-column align-items-center align-items-lg-start">
+        <div className="col mb-3 d-flex flex-column align-items-center">
           <img
             src={ENSIAS_AI_Club_logo_white}
             width="126"
@@ -20,7 +19,7 @@ function Footer() {
         </div>
 
         <div className="col mb-3">
-          <ul className="nav flex-column align-items-center align-items-lg-start">
+          <ul className="nav flex-column align-items-center">
             <li className="mb-2">
               <h5>ENSIAS</h5>
             </li>
@@ -60,7 +59,7 @@ function Footer() {
         </div>
 
         <div className="col mb-3">
-          <ul className="nav flex-column align-items-center align-items-lg-start">
+          <ul className="nav flex-column align-items-center">
             <li className="mb-2">
               <h5>ADEI ENSIAS</h5>
             </li>
@@ -100,7 +99,7 @@ function Footer() {
         </div>
 
         <div className="col mb-3">
-          <ul className="nav flex-column align-items-center align-items-lg-start">
+          <ul className="nav flex-column align-items-center">
             <li className="mb-2">
               <h5>Follow us</h5>
             </li>
@@ -145,8 +144,6 @@ function Footer() {
             </li>
           </ul>
         </div>
-
-        <div className="col mb-3"></div>
       </div>
 
       <div className="footer-bottom text-light">
