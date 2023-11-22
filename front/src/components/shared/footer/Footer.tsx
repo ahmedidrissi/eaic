@@ -7,8 +7,7 @@ function Footer() {
 
   return (
     <footer className="container-fluid">
-      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-5 mx-lg-5 border-top border-dark text-light"> 
-
+      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-5 mx-lg-5 border-top border-dark text-light">
         <div className="col mb-3 d-flex flex-column align-items-center">
           <img
             src={ENSIAS_AI_Club_logo_white}
@@ -21,40 +20,46 @@ function Footer() {
         <div className="col mb-3">
           <ul className="nav flex-column align-items-center">
             <li className="mb-2">
-              <h5>ENSIAS</h5>
+              <h5>ENSIAS UM5</h5>
             </li>
-            <li className="nav-item mb-2">
-              <a
-                href="http://ensias.um5.ac.ma/"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> Website
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a
-                href="https://www.linkedin.com/company/ensias/"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> LinkedIn
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a
-                href="https://www.facebook.com/ensias.official"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> Facebook
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a
-                href="https://www.instagram.com/ensias.official/?hl=fr"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> Instagram
-              </a>
-            </li>
+            <div>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="http://ensias.um5.ac.ma/"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> Website
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/ensias/"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> LinkedIn
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/ensias.official"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> Facebook
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/ensias.official/?hl=fr"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> Instagram
+                </a>
+              </li>
+            </div>
           </ul>
         </div>
 
@@ -63,38 +68,44 @@ function Footer() {
             <li className="mb-2">
               <h5>ADEI ENSIAS</h5>
             </li>
-            <li className="nav-item mb-2">
-              <a
-                href="https://www.linkedin.com/company/adei-ensias/"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> LinkedIn
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a
-                href="https://www.facebook.com/adei.ensias.3"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> Facebook
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a
-                href="https://www.instagram.com/adei.ensias/"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> Instagram
-              </a>
-            </li>
-            <li className="nav-item mb-2">
-              <a
-                href="https://twitter.com/des_adei"
-                className="nav-link p-0 text-light"
-              >
-                <i className="bi bi-chevron-right"></i> Twitter
-              </a>
-            </li>
+            <div>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/adei-ensias/"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> LinkedIn
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/adei.ensias.3"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> Facebook
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/adei.ensias/"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> Instagram
+                </a>
+              </li>
+              <li className="nav-item mb-2">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/des_adei"
+                  className="nav-link p-0 text-light"
+                >
+                  <i className="bi bi-chevron-right"></i> Twitter
+                </a>
+              </li>
+            </div>
           </ul>
         </div>
 
@@ -105,24 +116,28 @@ function Footer() {
             </li>
             <li className="nav-item mb-3 d-flex justify-content-center align-items-center gap-2">
               <a
+                target="_blank"
                 href="https://www.instagram.com/ensias_ai_club/"
                 className="nav-link p-0 text-light"
               >
                 <i className="bi bi-instagram" style={{ fontSize: "40px" }}></i>
               </a>
               <a
+                target="_blank"
                 href="https://www.facebook.com/ensiasai"
                 className="nav-link p-0 text-light"
               >
                 <i className="bi bi-facebook" style={{ fontSize: "40px" }}></i>
               </a>
               <a
+                target="_blank"
                 href="https://www.linkedin.com/company/ensiasai/"
                 className="nav-link p-0 text-light"
               >
                 <i className="bi bi-linkedin" style={{ fontSize: "40px" }}></i>
               </a>
               <a
+                target="_blank"
                 href="https://github.com/ensias-ai-club/"
                 className="nav-link p-0 text-light"
               >
