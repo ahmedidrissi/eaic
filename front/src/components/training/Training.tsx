@@ -7,6 +7,7 @@ import { constants } from "../../constants/constants";
 function Training() {
   const apiUrl = constants.apiUrl;
 
+  const [dataLoaded, setDataLoaded] = useState(false);
   const [trainingSessions, setTrainingSessions] = useState([]);
   const [filter, setFilter] = useState([]);
 
@@ -19,7 +20,9 @@ function Training() {
     })
       .then((response) => response.json())
       .then((data) => {
+        setDataLoaded(true);
         setTrainingSessions(data);
+        setFilter(data);
       });
   }, []);
 
@@ -48,13 +51,13 @@ function Training() {
                 </div>
               ))}
             </div>
-          ) : trainingSessions.length > 0 ? (
+          ) : dataLoaded ? (
             <div className="row">
-              {trainingSessions.map((session: any) => (
-                <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
-                  <Session {...session} />
+              <div className="col-md-6 offset-md-3">
+                <div className="alert alert-secondary" role="alert">
+                  No results found!
                 </div>
-              ))}
+              </div>
             </div>
           ) : (
             <div className="row">

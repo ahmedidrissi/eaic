@@ -7,6 +7,7 @@ import { constants } from "../../constants/constants";
 function Data() {
   const apiUrl = constants.apiUrl;
 
+  const [dataLoaded, setDataLoaded] = useState(false);
   const [dataSessions, setDataSessions] = useState([]);
   const [filter, setFilter] = useState([]);
 
@@ -20,7 +21,9 @@ function Data() {
     })
       .then((response) => response.json())
       .then((data) => {
+        setDataLoaded(true);
         setDataSessions(data);
+        setFilter(data);
       });
   }, []);
 
@@ -49,13 +52,13 @@ function Data() {
                 </div>
               ))}
             </div>
-          ) : dataSessions.length > 0 ? (
+          ) : dataLoaded ? (
             <div className="row">
-              {dataSessions.map((session: any) => (
-                <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
-                  <Session {...session} />
+              <div className="col-md-6 offset-md-3">
+                <div className="alert alert-secondary" role="alert">
+                  No results found!
                 </div>
-              ))}
+              </div>
             </div>
           ) : (
             <div className="row">
