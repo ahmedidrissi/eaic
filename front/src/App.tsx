@@ -5,6 +5,7 @@ import Contact from "./components/contact/Contact";
 import Data from "./components/data/Data";
 import Training from "./components/training/Training";
 import MLOps from "./components/mlops/MLOps";
+import NotFound from "./components/notfound/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/shared/scrolltotop/ScrollToTop";
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="/data" element={<Data />} />
               <Route path="/training" element={<Training />} />
               <Route path="/mlops" element={<MLOps />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </ScrollToTop>
