@@ -8,7 +8,15 @@ const getSessions = async (cell: String) => {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((response) => response.json());
+  }).then((response) => response.json())
+  .then((data) => {
+    data.sort((a: any, b: any) => {
+      const aYear = a.academicYear.split("/")[0];
+      const bYear = b.academicYear.split("/")[0];
+      return bYear - aYear;
+    });
+    return data;
+  });
 
   return response;
 };
