@@ -6,12 +6,16 @@ function Session(session: any) {
       <div className="card-header">
         <h6 style={{ textTransform: "uppercase" }}>{session.type}</h6>
       </div>
-      <img
-        src={session.image ? session.image : "https://via.placeholder.com/400"}
-        style={{ width: "100%", height: "25vh", objectFit: "cover" }}
-        className="card-img-top"
-        loading="lazy"
-      />
+      <div className="card-img">
+        <img
+          src={
+            session.image ? session.image : "https://via.placeholder.com/400"
+          }
+          className="card-img-top"
+          style={{ height: "100%", objectFit: "cover" }}
+          loading="lazy"
+        />
+      </div>
       <div className="card-body">
         <h5 className="card-title">{session.title}</h5>
         <div className="card-text">
@@ -26,11 +30,7 @@ function Session(session: any) {
       </div>
       <p className="card-subtitle mb-3">{session.academicYear}</p>
       <div className="card-footer">
-        <a
-          href={session.file}
-          className="btn btn-sm w-100"
-          download
-        >
+        <a href={session.file} className="btn btn-sm w-100" download>
           Download
         </a>
       </div>

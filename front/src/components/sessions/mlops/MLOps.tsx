@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import useSessions from "../../hooks/useSessions";
-import Filter from "../shared/filter/Filter";
-import Session from "../shared/session/Session";
-import ShimmerSession from "../shared/session/ShimmerSession";
+import useSessions from "../../../hooks/useSessions";
+import Filter from "../../shared/filter/Filter";
+import Session from "../session/Session";
+import ShimmerSession from "../session/ShimmerSession";
 
-function Training() {
+function MLOps() {
   const [loading, setLoading] = useState(true);
   const [sessions, setSessions] = useState([]);
   const [filter, setFilter] = useState([]);
 
   useEffect(() => {
-    useSessions("Training").then((sessions) => {
+    useSessions("MLOps").then((sessions) => {
       setSessions(sessions);
       setFilter(sessions);
       setLoading(false);
@@ -26,7 +26,7 @@ function Training() {
               className="headline-md section-title text-center"
               id="collection-label"
             >
-              Training Sessions
+              MLOps Sessions
             </h2>
           </div>
           <div className="row">
@@ -65,4 +65,4 @@ function Training() {
   );
 }
 
-export default Training;
+export default MLOps;

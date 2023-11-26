@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import useSessions from "../../hooks/useSessions";
-import Filter from "../shared/filter/Filter";
-import Session from "../shared/session/Session";
-import ShimmerSession from "../shared/session/ShimmerSession";
+import useSessions from "../../../hooks/useSessions";
+import Filter from "../../shared/filter/Filter";
+import Session from "../session/Session";
+import ShimmerSession from "../session/ShimmerSession";
 
 function Data() {
   const [loading, setLoading] = useState(true);
