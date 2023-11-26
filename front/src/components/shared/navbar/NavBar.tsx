@@ -10,6 +10,20 @@ function NavBar() {
   const location = useLocation();
   const currentPath = location.pathname;
 
+  const closeDropdown = () => {
+    const dropdowns = document.getElementsByClassName("dropdown.open");
+    for (let i = 0; i < dropdowns.length; i++) {
+      dropdowns[i].classList.remove("open");
+    }
+  };
+
+  window.addEventListener("mousedown", (e) => {
+    const target = e.target as HTMLElement;
+    if (target.closest(".dropdown") == null) {
+      closeDropdown();
+    }
+  })
+
   return (
     <>
       <a
@@ -88,9 +102,10 @@ function NavBar() {
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className={
+                    currentPath == "/data" || currentPath == "/training" || currentPath == "/mlops" ? "nav-link dropdown-toggle active" : "nav-link dropdown-toggle"
+                  }
                   href="#"
-                  id="navbarDropdownSessions"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -99,7 +114,6 @@ function NavBar() {
                 </a>
                 <ul
                   className="dropdown-menu"
-                  aria-labelledby="navbarDropdownSessions"
                 >
                   <li>
                     <Link
