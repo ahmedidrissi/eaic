@@ -2,7 +2,7 @@ import "./Session.css";
 
 function Session(session: any) {
   return (
-    <div className="card text-center text-light mb-3">
+    <div className="session card text-center text-light mb-3">
       <div className="card-header">
         <h6 style={{ textTransform: "uppercase" }}>{session.type}</h6>
       </div>
