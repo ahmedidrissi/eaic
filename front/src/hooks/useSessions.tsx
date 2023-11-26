@@ -3,7 +3,7 @@ import { constants } from "../constants/constants";
 const apiUrl = constants.apiUrl;
 
 const getSessions = async (cell: String) => {
-  const response = await fetch(`${apiUrl}/sessions/cell/${cell}`, {
+  const response = await fetch(`${apiUrl}/sessions/cells/${cell}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

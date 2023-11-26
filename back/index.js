@@ -91,7 +91,7 @@ app.get("/api/v1/sessions", async (req, res) => {
   }
 });
 
-app.get("/api/v1/sessions/cell/:cell", async (req, res) => {
+app.get("/api/v1/sessions/cells/:cell", async (req, res) => {
   const cell = req.params.cell;
   const sessions = await schemas.Sessions.find({ cell: cell }).exec();
 
