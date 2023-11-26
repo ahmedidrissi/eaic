@@ -1,8 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import "./Projects.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const projects = [
   {
@@ -103,7 +102,7 @@ function Projects() {
             </h2>
           </div>
           <div className="row">
-            <Slider {...settings}>
+            {/* <Slider {...settings}>
               {projects.map((project) => (
                 <div className="card text-center text-light">
                   <div className="card-body">
@@ -120,7 +119,7 @@ function Projects() {
                   </div>
                 </div>
               ))}
-            </Slider>
+            </Slider> */}
           </div>
         </div>
       </section>
