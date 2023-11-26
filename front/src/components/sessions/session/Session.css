@@ -15,20 +15,20 @@
     height: 200px;
 }
 
-.session.card-body {
+.session .card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.session.card-footer a {
+.session .card-footer a {
     background-color: var(--color-6) !important;
     color: var(--main-text-color) !important;
     font-weight: bold;
     transition: all 0.5s ease-in-out;
 }
-.session.card-footer a:hover {
+.session .card-footer a:hover {
     background-color: var(--color-7) !important;
     box-shadow: 0 0 10px var(--color-7) !important;
     transition: all 0.5s ease-in-out;
