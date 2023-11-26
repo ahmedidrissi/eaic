@@ -44,6 +44,23 @@
     font-weight: bold;
 }
 
+.navbar .dropdown-menu {
+    background-color: var(--navbar-bg-color) !important;
+    border: none !important;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+.navbar .dropdown-item {
+    color: var(--main-text-color) !important;
+    transition: all 0.5s ease-in-out; 
+}
+.navbar .dropdown-item:hover {
+    background-color: var(--color-8) !important;
+    transition: all 0.5s ease-in-out;
+}
+.navbar .dropdown-item.active {
+    background-color: var(--color-8) !important;
+}
+
 @media (max-width: 768px) {
     .navbar-brand img {
         transform: scale(0.8);

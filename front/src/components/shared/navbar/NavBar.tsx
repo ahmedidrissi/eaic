@@ -86,35 +86,52 @@ function NavBar() {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className={
-                    currentPath == "/data" ? "nav-link active" : "nav-link"
-                  }
-                  to={basePath + "data"}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownSessions"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  Data
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className={
-                    currentPath == "/training" ? "nav-link active" : "nav-link"
-                  }
-                  to={basePath + "training"}
+                  Sessions
+                </a>
+                <ul
+                  className="dropdown-menu"
+                  aria-labelledby="navbarDropdownSessions"
                 >
-                  Training
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className={
-                    currentPath == "/mlops" ? "nav-link active" : "nav-link"
-                  }
-                  to={basePath + "mlops"}
-                >
-                  MLOps
-                </Link>
+                  <li>
+                    <Link
+                      className={
+                        currentPath == "/data" ? "dropdown-item active" : "dropdown-item"
+                      }
+                      to={basePath + "data"}
+                    >
+                      Data
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={
+                        currentPath == "/training" ? "dropdown-item active" : "dropdown-item"
+                      }
+                      to={basePath + "training"}
+                    >
+                      Training
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={
+                        currentPath == "/mlops" ? "dropdown-item active" : "dropdown-item"
+                      }
+                      to={basePath + "mlops"}
+                    >
+                      MLOps
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <Link
