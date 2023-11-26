@@ -22,7 +22,7 @@ function NavBar() {
     if (target.closest(".dropdown") == null) {
       closeDropdown();
     }
-  })
+  });
 
   return (
     <>
@@ -75,7 +75,9 @@ function NavBar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon-close"><i className="bi bi-x-lg"></i></span>
+            <span className="navbar-toggler-icon-close">
+              <i className="bi bi-x-lg"></i>
+            </span>
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -103,7 +105,11 @@ function NavBar() {
               <li className="nav-item dropdown">
                 <a
                   className={
-                    currentPath == "/data" || currentPath == "/training" || currentPath == "/mlops" ? "nav-link dropdown-toggle active" : "nav-link dropdown-toggle"
+                    currentPath == "/data" ||
+                    currentPath == "/training" ||
+                    currentPath == "/mlops"
+                      ? "nav-link dropdown-toggle active"
+                      : "nav-link dropdown-toggle"
                   }
                   href="#"
                   role="button"
@@ -112,13 +118,13 @@ function NavBar() {
                 >
                   Sessions
                 </a>
-                <ul
-                  className="dropdown-menu"
-                >
+                <ul className="dropdown-menu">
                   <li>
                     <Link
                       className={
-                        currentPath == "/data" ? "dropdown-item active" : "dropdown-item"
+                        currentPath == "/data"
+                          ? "dropdown-item active"
+                          : "dropdown-item"
                       }
                       to={basePath + "data"}
                     >
@@ -128,7 +134,9 @@ function NavBar() {
                   <li>
                     <Link
                       className={
-                        currentPath == "/training" ? "dropdown-item active" : "dropdown-item"
+                        currentPath == "/training"
+                          ? "dropdown-item active"
+                          : "dropdown-item"
                       }
                       to={basePath + "training"}
                     >
@@ -138,7 +146,9 @@ function NavBar() {
                   <li>
                     <Link
                       className={
-                        currentPath == "/mlops" ? "dropdown-item active" : "dropdown-item"
+                        currentPath == "/mlops"
+                          ? "dropdown-item active"
+                          : "dropdown-item"
                       }
                       to={basePath + "mlops"}
                     >
