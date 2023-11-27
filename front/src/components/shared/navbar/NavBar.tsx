@@ -10,20 +10,6 @@ function NavBar() {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const closeDropdown = () => {
-    const dropdowns = document.getElementsByClassName("dropdown.open");
-    for (let i = 0; i < dropdowns.length; i++) {
-      dropdowns[i].classList.remove("open");
-    }
-  };
-
-  window.addEventListener("mousedown", (e) => {
-    const target = e.target as HTMLElement;
-    if (target.closest(".dropdown") == null) {
-      closeDropdown();
-    }
-  });
-
   return (
     <>
       <a
