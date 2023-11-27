@@ -45,7 +45,7 @@ function MLOps() {
           ) : loading ? (
             <div className="row">
               {[...Array(8)].map((_, index) => (
-                <div className="col-lg-3 col-md-4 col-sm-6" key={index}>
+                <div className="col-lg-3 col-md-4 col-sm-6 gy-3" key={index}>
                   <ShimmerSession />
                 </div>
               ))}
