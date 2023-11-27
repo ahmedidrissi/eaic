@@ -1,7 +1,7 @@
 .session.card {
     position: relative;
     background-color: var(--color-2) !important;
-    height: 60vh !important;
+    height: 100%;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
 }
@@ -11,8 +11,9 @@
     transition: all 0.5s ease-in-out;
 }
 
-.session.card .card-img {
+.session.card img {
     height: 200px;
+    object-fit: cover;
 }
 
 .session .card-body {
