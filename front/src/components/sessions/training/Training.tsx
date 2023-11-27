@@ -37,7 +37,7 @@ function Training() {
           {filter.length > 0 ? (
             <div className="row">
               {filter.map((session: any) => (
-                <div className="col-lg-3 col-md-4 col-sm-6" key={session._id}>
+                <div className="col-lg-3 col-md-4 col-sm-6 gy-3" key={session._id}>
                   <Session {...session} />
                 </div>
               ))}
