@@ -1,5 +1,5 @@
 .contact-info, .contact-form {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--color-2);
     border-radius: 8px;
     backdrop-filter: blur(10px);
 }
