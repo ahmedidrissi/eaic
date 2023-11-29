@@ -8,6 +8,9 @@
     box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
 }
 
+.accordion-button {
+    z-index: 0 !important;
+}
 .accordion-button:focus {
     box-shadow: none !important;
 }
