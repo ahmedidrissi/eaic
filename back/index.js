@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 const db_uri = process.env.DB_URI;
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://eaic.vercel.app",
   credentials: true,
   optionsSuccessStatus: 200,
 };
