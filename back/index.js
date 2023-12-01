@@ -95,9 +95,10 @@ app.get("/api/v1/analytics", async (req, res) => {
   }
 });
 
+mongoose.connect(db_uri, dbOptions).then(() => {
+  console.log("Connected to MongoDB");
+});
+
 const server = app.listen(port, () => {
-  mongoose.connect(db_uri, dbOptions).then(() => {
-    console.log("Connected to MongoDB");
-  });
   console.log(`Server is running on port ${port}`);
 });
