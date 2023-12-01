@@ -10,18 +10,18 @@ import MLOps from "./components/sessions/mlops/MLOps";
 import NotFound from "./components/notfound/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/shared/scrolltotop/ScrollToTop";
-import updateAnalytics from "./hooks/updateAnalytics";
+// import updateAnalytics from "./hooks/updateAnalytics";
 
 import "./App.css";
 
 function App() {
 
-  if (sessionStorage.getItem("visited") === null) {
-    updateAnalytics("visits");
-    sessionStorage.setItem("visited", "true");
-  } else {
-    updateAnalytics("views");
-  }
+  // if (sessionStorage.getItem("visited") === null) {
+  //   updateAnalytics("visits");
+  //   sessionStorage.setItem("visited", "true");
+  // } else {
+  //   updateAnalytics("views");
+  // }
 
   return (
     <>
