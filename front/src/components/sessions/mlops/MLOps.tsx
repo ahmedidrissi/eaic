@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useSessions from "../../../hooks/useSessions";
+import useSessions from "../../../hooks/getSessions";
 import Filter from "../../shared/filter/Filter";
 import Session from "../session/Session";
 import ShimmerSession from "../session/ShimmerSession";
@@ -37,7 +37,10 @@ function MLOps() {
           {filter.length > 0 ? (
             <div className="row">
               {filter.map((session: any) => (
-                <div className="col-lg-3 col-md-4 col-sm-6 gy-3" key={session._id}>
+                <div
+                  className="col-lg-3 col-md-4 col-sm-6 gy-3"
+                  key={session._id}
+                >
                   <Session {...session} />
                 </div>
               ))}
