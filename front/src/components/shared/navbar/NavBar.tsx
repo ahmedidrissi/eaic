@@ -1,14 +1,26 @@
 import DCD_logo_inverted from "../../../assets/DCD_logo_inverted.png";
 import ENSIAS_AI_Club_logo_white_text from "../../../assets/ENSIAS_AI_Club_logo_white_text.png";
 import x from "../../../assets/x.png";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { constants } from "../../../constants/constants";
+import getAnalytics from "../../../hooks/getAnalytics";
 import "./NavBar.css";
 
 function NavBar() {
   const basePath = constants.basePath;
   const location = useLocation();
   const currentPath = location.pathname;
+  const [analytics, setAnalytics] = useState({ visits: 0, views: 0 });
+
+  useEffect(() => {
+    getAnalytics().then((data) => {
+      setAnalytics({
+        visits: data.visits,
+        views: data.views,
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -162,6 +174,12 @@ function NavBar() {
                 >
                   Contact
                 </Link>
+              </li>
+              <li className="nav-item ms-2 d-flex justify-content-center align-items-center">
+                <div className="eye-icon">
+                  <i className="bi bi-eye-fill"></i>
+                  <span> {analytics.visits}</span>
+                </div>
               </li>
             </ul>
           </div>
