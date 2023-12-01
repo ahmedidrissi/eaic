@@ -12,6 +12,12 @@ const sessionSchema = new Schema({
     academicYear: {type: String, required: true},
 });
 
-const Sessions = mongoose.model("Sessions", sessionSchema, "sessions");
+const analyticsSchema = new Schema({
+    visits: {type: Number, required: true},
+    views: {type: Number, required: true},
+});
 
-module.exports = { Sessions };
+const Sessions = mongoose.model("Sessions", sessionSchema, "sessions");
+const Analytics = mongoose.model("Analytics", analyticsSchema, "analytics");
+
+module.exports = { Sessions , Analytics };
