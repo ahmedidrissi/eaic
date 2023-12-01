@@ -2,7 +2,6 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const schemas = require("./models/schemas");
-const fs = require("fs");
 const mongoose = require("mongoose");
 const mail = require("./mail");
 require("dotenv/config");
@@ -56,7 +55,7 @@ app.post("/api/v1/contact", async (req, res) => {
   name = contactData.name;
   to = contactData.email;
   message = contactData.message;
-  const sendMail = await mail.sendContactEmail({name, to, message});
+  const sendMail = await mail.sendContactEmail({ name, to, message });
   if (sendMail) {
     res.status(200).json({ message: "Mail sent successfully" });
   } else {
@@ -65,6 +64,23 @@ app.post("/api/v1/contact", async (req, res) => {
 
   res.end();
 });
+
+// update website visits and views
+app.put("/api/v1/analytics/:type", async (req, res) => {
+  const type = req.params.type;
+  const analytics = await schemas.Analytics.findById("656a38983da3b61d5f3d66cc").exec();
+  analytics.views += 1;
+  if (type === "visits") {
+    analytics.visits += 1;
+  }
+  const updateAnalytics = await analytics.save();
+  if (updateAnalytics) {
+    res.status(200).json({ message: "Analytics updated successfully" });
+  } else {
+    res.status(400).json({ message: "Error updating analytics" });
+  }
+});
+
 
 const server = app.listen(port, () => {
   mongoose.connect(db_uri, dbOptions).then(() => {
