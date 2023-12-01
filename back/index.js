@@ -68,7 +68,9 @@ app.post("/api/v1/contact", async (req, res) => {
 // update website visits and views
 app.put("/api/v1/analytics/:type", async (req, res) => {
   const type = req.params.type;
-  const analytics = await schemas.Analytics.findById("656a38983da3b61d5f3d66cc").exec();
+  const analytics = await schemas.Analytics.findById(
+    "656a38983da3b61d5f3d66cc"
+  ).exec();
   analytics.views += 1;
   if (type === "visits") {
     analytics.visits += 1;
@@ -81,6 +83,17 @@ app.put("/api/v1/analytics/:type", async (req, res) => {
   }
 });
 
+// get website visits and views
+app.get("/api/v1/analytics", async (req, res) => {
+  const analytics = await schemas.Analytics.findById(
+    "656a38983da3b61d5f3d66cc"
+  ).exec();
+  if (analytics) {
+    res.status(200).json(analytics);
+  } else {
+    res.status(400).json({ message: "Error fetching analytics" });
+  }
+});
 
 const server = app.listen(port, () => {
   mongoose.connect(db_uri, dbOptions).then(() => {
