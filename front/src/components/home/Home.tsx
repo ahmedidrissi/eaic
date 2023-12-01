@@ -14,9 +14,7 @@ function Home() {
           <h1 className="hero-title">
             Welcome to <span className="span">ENSIAS AI Club </span>
           </h1>
-
           <p className="section-text">Where ideas become Reality</p>
-
           <Link className="btn" to={basePath + "about"}>
             Who are we?
           </Link>
