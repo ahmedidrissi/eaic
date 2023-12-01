@@ -175,7 +175,7 @@ function NavBar() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item ms-2 d-flex justify-content-center align-items-center">
+              <li className="nav-item ms-lg-2 d-flex align-items-center">
                 <div className="eye-icon">
                   <i className="bi bi-eye-fill"></i>
                   <span> {analytics.visits}</span>
