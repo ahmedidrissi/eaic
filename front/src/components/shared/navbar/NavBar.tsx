@@ -1,16 +1,26 @@
 import DCD_logo_inverted from "../../../assets/DCD_logo_inverted.png";
 import ENSIAS_AI_Club_logo_white_text from "../../../assets/ENSIAS_AI_Club_logo_white_text.png";
 import x from "../../../assets/x.png";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { constants } from "../../../constants/constants";
-import useAnalytics from "../../../hooks/useAnalytics";
+import useGetAnalytics from "../../../hooks/useGetAnalytics";
 import "./NavBar.css";
 
 function NavBar() {
   const basePath = constants.basePath;
   const location = useLocation();
   const currentPath = location.pathname;
-  const analytics = useAnalytics("visits", "get");
+  const [analytics, setAnalytics] = useState({ visits: 0, views: 0 });
+
+  useEffect(() => {
+    useGetAnalytics().then((data) => {
+      setAnalytics({
+        visits: data.visits,
+        views: data.views,
+      });
+    });
+  }, []);
 
   return (
     <>
