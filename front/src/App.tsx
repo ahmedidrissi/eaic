@@ -10,17 +10,16 @@ import MLOps from "./components/sessions/mlops/MLOps";
 import NotFound from "./components/notfound/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/shared/scrolltotop/ScrollToTop";
-import useUpdateAnalytics from "./hooks/useUpdateAnalytics";
-
+import useAnalytics from "./hooks/useAnalytics";
 import "./App.css";
 
 function App() {
 
   if (sessionStorage.getItem("visited") === null) {
-    useUpdateAnalytics("visits");
+    useAnalytics("visits", "update");
     sessionStorage.setItem("visited", "true");
   } else {
-    useUpdateAnalytics("views");
+    useAnalytics("views", "update");
   }
 
   return (
