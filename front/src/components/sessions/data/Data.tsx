@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useSessions from "../../../hooks/getSessions";
+import useGetSessions from "../../../hooks/useGetSessions";
 import Filter from "../../shared/filter/Filter";
 import Session from "../session/Session";
 import ShimmerSession from "../session/ShimmerSession";
@@ -10,7 +10,7 @@ function Data() {
   const [filter, setFilter] = useState([]);
 
   useEffect(() => {
-    useSessions("Data").then((sessions) => {
+    useGetSessions("Data").then((sessions) => {
       setSessions(sessions);
       setFilter(sessions);
       setLoading(false);

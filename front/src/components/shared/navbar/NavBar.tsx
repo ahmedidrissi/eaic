@@ -4,7 +4,7 @@ import x from "../../../assets/x.png";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { constants } from "../../../constants/constants";
-import getAnalytics from "../../../hooks/getAnalytics";
+import useGetAnalytics from "../../../hooks/useGetAnalytics";
 import "./NavBar.css";
 
 function NavBar() {
@@ -14,7 +14,7 @@ function NavBar() {
   const [analytics, setAnalytics] = useState({ visits: 0, views: 0 });
 
   useEffect(() => {
-    getAnalytics().then((data) => {
+    useGetAnalytics().then((data) => {
       setAnalytics({
         visits: data.visits,
         views: data.views,

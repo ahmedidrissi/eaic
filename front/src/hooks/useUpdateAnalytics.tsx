@@ -2,7 +2,7 @@ import { constants } from "../constants/constants";
 
 const apiUrl = constants.apiUrl;
 
-const updateAnalytics = async (type: string) => {
+const useUpdateAnalytics = async (type: string) => {
   const response = await fetch(`${apiUrl}/analytics/${type}`, {
     method: "PUT",
     headers: {
@@ -13,4 +13,4 @@ const updateAnalytics = async (type: string) => {
   return response;
 };
 
-export default updateAnalytics;
+export default useUpdateAnalytics;

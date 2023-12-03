@@ -2,7 +2,7 @@ import { constants } from "../constants/constants";
 
 const apiUrl = constants.apiUrl;
 
-const getAnalytics = async () => {
+const useGetAnalytics = async () => {
   const response = await fetch(`${apiUrl}/analytics`, {
     method: "GET",
     headers: {
@@ -12,4 +12,4 @@ const getAnalytics = async () => {
   return response;
 };
 
-export default getAnalytics;
+export default useGetAnalytics;

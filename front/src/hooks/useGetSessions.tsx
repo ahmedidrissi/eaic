@@ -2,7 +2,7 @@ import { constants } from "../constants/constants";
 
 const apiUrl = constants.apiUrl;
 
-const getSessions = async (cell: String) => {
+const useGetSessions = async (cell: String) => {
   const response = await fetch(`${apiUrl}/sessions/cells/${cell}`, {
     method: "GET",
     headers: {
@@ -21,4 +21,4 @@ const getSessions = async (cell: String) => {
   return response;
 };
 
-export default getSessions;
+export default useGetSessions;
