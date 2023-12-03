@@ -77,7 +77,7 @@ app.put("/api/v1/analytics/:type", async (req, res) => {
   }
   const updateAnalytics = await analytics.save();
   if (updateAnalytics) {
-    res.status(200).json({ message: "Analytics updated successfully" });
+    res.status(200).json(analytics);
   } else {
     res.status(400).json({ message: "Error updating analytics" });
   }
