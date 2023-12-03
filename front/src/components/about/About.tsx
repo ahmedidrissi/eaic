@@ -39,11 +39,12 @@ function About() {
             >
               <Carousel
                 showThumbs={false}
+                showArrows={false}
                 infiniteLoop={true}
                 autoPlay={true}
                 stopOnHover={true}
                 showStatus={false}
-                swipeable={false}
+                swipeable={true}
                 width={"100%"}
               >
                 <div>
