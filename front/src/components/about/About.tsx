@@ -1,4 +1,12 @@
 import "./About.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import img1 from "../../assets/ai_day_1.jfif";
+import img2 from "../../assets/ai_day_2.jfif";
+import img3 from "../../assets/ai_day_3.jfif";
+import img4 from "../../assets/ai_day_4.jfif";
+import img5 from "../../assets/ai_day_5.jfif";
+import img6 from "../../assets/ai_day_6.jfif";
 
 function About() {
   return (
@@ -21,6 +29,44 @@ function About() {
             forward to creating a community of like-minded individuals who are
             eager to learn and share their insights.
           </p>
+
+          <h2 className="text-center">Our Event</h2>
+          <div className="container p-3 d-flex justify-content-center">
+            <div
+              className="carousel py-3"
+              id="events"
+              style={{ maxWidth: "600px" }}
+            >
+              <Carousel
+                showThumbs={false}
+                infiniteLoop={true}
+                autoPlay={true}
+                stopOnHover={true}
+                showStatus={false}
+                swipeable={false}
+                width={"100%"}
+              >
+                <div>
+                  <img src={img1} width={"200px"} />
+                </div>
+                <div>
+                  <img src={img2} width={"200px"} />
+                </div>
+                <div>
+                  <img src={img3} width={"200px"} />
+                </div>
+                <div>
+                  <img src={img4} width={"200px"} />
+                </div>
+                <div>
+                  <img src={img5} width={"200px"} />
+                </div>
+                <div>
+                  <img src={img6} width={"200px"} />
+                </div>
+              </Carousel>
+            </div>
+          </div>
           <h2 className="text-center">Q&A</h2>
           <div className="container p-3 d-flex justify-content-center">
             <div className="accordion" id="qna">
