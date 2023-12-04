@@ -34,8 +34,11 @@ function Filter(props: any) {
 
   return (
     <>
-      <div className="d-flex justify-content-center align-items-center gap-2">
+      <div className="filter d-flex justify-content-center align-items-center gap-2">
         <div className="input-group mb-4">
+          <button className="btn " type="button" id="button-addon2">
+            <i className="bi bi-search"></i>
+          </button>
           <input
             type="text"
             className="form-control"
@@ -47,27 +50,46 @@ function Filter(props: any) {
               handleFilter(e.target.value, currentYear);
             }}
           />
-          <button className="btn" type="button" id="button-addon2">
-            <i className="bi bi-search"></i>
-          </button>
-        </div>
-        <div className="input-group mb-4 w-25">
-          <select
-            id="inputGroupSelect"
-            className="form-select"
-            aria-label="Default select example"
-            onChange={(e) => {
-              setCurrentYear(e.target.value);
-              handleFilter(currentSearch, e.target.value);
-            }}
-          >
-            <option value="">All Years</option>
-            {uniqueYears.map((year: any, index: any) => (
-              <option key={index} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
+          <div className="dropdown">
+            <a
+              className="btn dropdown-toggle"
+              href="#"
+              role="button"
+              id="dropdownMenuYears"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i className="bi bi-filter"></i>
+            </a>
+            <ul className="dropdown-menu dropdown-menu-end mt-1" aria-labelledby="dropdownMenuYears">
+              <li>
+                <a
+                  className="dropdown-item"
+                  href="#"
+                  onClick={() => {
+                    setCurrentYear("");
+                    handleFilter(currentSearch, "");
+                  }}
+                >
+                  All Years
+                </a>
+              </li>
+              {uniqueYears.map((year: any, index: any) => (
+                <li key={index}>
+                  <a
+                    className="dropdown-item"
+                    href="#"
+                    onClick={(e) => {
+                      setCurrentYear(e.currentTarget.textContent!);
+                      handleFilter(currentSearch, e.currentTarget.textContent!);
+                    }}
+                  >
+                    {year}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </>
