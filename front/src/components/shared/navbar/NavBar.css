@@ -2,7 +2,7 @@
     background-color: var(--navbar-bg-color) !important;
     color: var(--main-text-color) !important;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
-    z-index: 2 !important;
+    z-index: 99999 !important;
 }
 
 .close-navbar-toggler{
@@ -45,9 +45,11 @@
 }
 
 .navbar .dropdown-menu {
-    background-color: var(--navbar-bg-color) !important;
+    background-color: rgb(41, 17, 91, 0.4) !important;
     border: none !important;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 .navbar .dropdown-item {
     color: var(--main-text-color) !important;
