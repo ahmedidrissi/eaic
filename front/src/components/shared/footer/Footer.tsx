@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <footer className="container-fluid">
-      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-5 mx-lg-5 border-top border-dark text-light">
+      <div className="footer-top row row-cols-1 row-cols-sm-2 row-cols-md-4 p-5 mx-lg-5 text-light">
         <div className="col mb-3 d-flex flex-column align-items-center">
           <img
             src={ENSIAS_AI_Club_logo_white}
@@ -163,7 +163,7 @@ function Footer() {
 
       <div className="footer-bottom text-light">
         <div className="copyright d-flex justify-content-center align-items-center py-4 border-top border-dark">
-          <p>
+          <p className="mt-2">
             &copy; {year} ENSIAS AI Club <i className="bi bi-heart-fill"></i>{" "}
             All rights reserved.
           </p>
