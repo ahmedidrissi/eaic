@@ -4,9 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import img1 from "../../assets/ai_day_1.jfif";
 import img2 from "../../assets/ai_day_2.jfif";
 import img3 from "../../assets/ai_day_3.jfif";
-import img4 from "../../assets/ai_day_4.jfif";
-import img5 from "../../assets/ai_day_5.jfif";
-import img6 from "../../assets/ai_day_6.jfif";
+import img4 from "../../assets/data_competition.jfif";
 
 function About() {
   return (
@@ -30,7 +28,7 @@ function About() {
             eager to learn and share their insights.
           </p>
 
-          <h2 className="text-center">Our Event</h2>
+          <h2 className="text-center">Our Events</h2>
           <div className="container p-3 d-flex justify-content-center">
             <div
               className="carousel py-3"
@@ -58,12 +56,6 @@ function About() {
                 </div>
                 <div>
                   <img src={img4} width={"200px"} />
-                </div>
-                <div>
-                  <img src={img5} width={"200px"} />
-                </div>
-                <div>
-                  <img src={img6} width={"200px"} />
                 </div>
               </Carousel>
             </div>
