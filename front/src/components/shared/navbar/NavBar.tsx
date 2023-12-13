@@ -136,7 +136,7 @@ function NavBar() {
                       }
                       to={basePath + "data"}
                     >
-                      Data
+                      Data Cell
                     </Link>
                   </li>
                   <li>
@@ -148,7 +148,7 @@ function NavBar() {
                       }
                       to={basePath + "training"}
                     >
-                      Training
+                      Training Cell
                     </Link>
                   </li>
                   <li>
@@ -160,7 +160,7 @@ function NavBar() {
                       }
                       to={basePath + "mlops"}
                     >
-                      MLOps
+                      MLOps Cell
                     </Link>
                   </li>
                 </ul>
