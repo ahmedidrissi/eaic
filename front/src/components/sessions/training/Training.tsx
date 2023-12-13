@@ -26,7 +26,7 @@ function Training() {
               className="headline-md section-title text-center"
               id="collection-label"
             >
-              Training Sessions
+              Training Cell
             </h2>
           </div>
           <div className="row">

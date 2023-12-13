@@ -26,7 +26,7 @@ function MLOps() {
               className="headline-md section-title text-center"
               id="collection-label"
             >
-              MLOps Sessions
+              MLOps Cell
             </h2>
           </div>
           <div className="row">
