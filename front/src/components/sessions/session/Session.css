@@ -12,15 +12,19 @@
 }
 
 .session.card img {
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+}
+
+.session.card .type span {
+    background-color: var(--color-8) !important;
 }
 
 .session .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 .session .card-footer a {
