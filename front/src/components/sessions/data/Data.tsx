@@ -35,10 +35,10 @@ function Data() {
             </div>
           </div>
           {filter.length > 0 ? (
-            <div className="row">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
               {filter.map((session: any) => (
                 <div
-                  className="col-lg-4 col-md-6 col-sm-12 gy-4"
+                  className="col"
                   key={session._id}
                 >
                   <Session {...session} />
@@ -46,9 +46,9 @@ function Data() {
               ))}
             </div>
           ) : loading ? (
-            <div className="row">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
               {[...Array(8)].map((_, index) => (
-                <div className="col-lg-4 col-md-6 col-sm-12 gy-4" key={index}>
+                <div className="col" key={index}>
                   <ShimmerSession />
                 </div>
               ))}
