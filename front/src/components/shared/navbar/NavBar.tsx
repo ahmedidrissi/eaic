@@ -168,6 +168,16 @@ function NavBar() {
               <li className="nav-item">
                 <Link
                   className={
+                    currentPath == "/blogs" ? "nav-link active" : "nav-link"
+                  }
+                  to={basePath + "blogs"}
+                >
+                  Blogs
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className={
                     currentPath == "/contact" ? "nav-link active" : "nav-link"
                   }
                   to={basePath + "contact"}
