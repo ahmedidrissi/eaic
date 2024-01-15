@@ -46,7 +46,7 @@ function Training() {
               ))}
             </div>
           ) : loading ? (
-            <div className="row">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
               {[...Array(8)].map((_, index) => (
                 <div className="col" key={index}>
                   <ShimmerSession />
