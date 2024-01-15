@@ -3,6 +3,7 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Cells from "./components/cells/Cells";
 import Projects from "./components/projects/Projects";
+import Blogs from "./components/blogs/Blogs";
 import Contact from "./components/contact/Contact";
 import Data from "./components/sessions/data/Data";
 import Training from "./components/sessions/training/Training";
@@ -14,7 +15,6 @@ import useUpdateAnalytics from "./hooks/useUpdateAnalytics";
 import "./App.css";
 
 function App() {
-
   if (sessionStorage.getItem("visited") === null) {
     useUpdateAnalytics("visits");
     sessionStorage.setItem("visited", "true");
@@ -32,6 +32,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/cells" element={<Cells />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/blogs" element={<Blogs />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/data" element={<Data />} />
               <Route path="/training" element={<Training />} />
