@@ -95,6 +95,17 @@ app.get("/api/v1/analytics", async (req, res) => {
   }
 });
 
+// get all blogs
+app.get("/api/v1/blogs", async (req, res) => {
+  const blogs = await schemas.Blogs.find().exec();
+
+  if (blogs) {
+    res.status(200).json(blogs);
+  } else {
+    res.status(400).json({ message: "Error fetching blogs" });
+  }
+});
+
 mongoose.connect(db_uri, dbOptions).then(() => {
   console.log("Connected to MongoDB");
 });
