@@ -49,13 +49,9 @@ function About() {
               >
                 {imgList.map((img, index) => (
                   <div key={index}>
-                    <img 
-                    src={img} 
-                    width={"200px"} 
-                    />
+                    <img src={img} />
                   </div>
                 ))}
-                
               </Carousel>
             </div>
           </div>
