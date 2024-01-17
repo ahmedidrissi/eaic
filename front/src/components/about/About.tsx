@@ -4,7 +4,9 @@ import { Carousel } from "react-responsive-carousel";
 import img1 from "../../assets/ai_day_1.jfif";
 import img2 from "../../assets/ai_day_2.jfif";
 import img3 from "../../assets/ai_day_3.jfif";
-import img4 from "../../assets/data_competition.jfif";
+import img4 from "../../assets/data_competition_2024.png";
+
+const imgList = [img1, img2, img3, img4];
 
 function About() {
   return (
@@ -45,18 +47,15 @@ function About() {
                 swipeable={true}
                 width={"100%"}
               >
-                <div>
-                  <img src={img1} width={"200px"} />
-                </div>
-                <div>
-                  <img src={img2} width={"200px"} />
-                </div>
-                <div>
-                  <img src={img3} width={"200px"} />
-                </div>
-                <div>
-                  <img src={img4} width={"200px"} />
-                </div>
+                {imgList.map((img, index) => (
+                  <div key={index}>
+                    <img 
+                    src={img} 
+                    width={"200px"} 
+                    />
+                  </div>
+                ))}
+                
               </Carousel>
             </div>
           </div>
