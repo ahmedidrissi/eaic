@@ -3,7 +3,7 @@ import ENSIAS_AI_Club_logo_white from "../../../assets/ENSIAS_AI_Club_logo_white
 import "./Footer.css";
 
 function Footer() {
-  const year = 2023;
+  const year = new Date().getFullYear();
 
   return (
     <footer className="container-fluid">
