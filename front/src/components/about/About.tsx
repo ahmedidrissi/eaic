@@ -76,7 +76,7 @@ function About() {
                   className="accordion-collapse collapse"
                   data-bs-parent="#qna"
                 >
-                  <div className="accordion-body">
+                  <div className="accordion-body text-white">
                     We want to spread the AI culture through our campus and
                     create a safe and motivating environment for AI enthusiasts.
                   </div>
@@ -100,7 +100,7 @@ function About() {
                   className="accordion-collapse collapse"
                   data-bs-parent="#qna"
                 >
-                  <div className="accordion-body">
+                  <div className="accordion-body text-white">
                     In our school ENSIAS based in Rabat.
                   </div>
                 </div>
@@ -123,7 +123,7 @@ function About() {
                   className="accordion-collapse collapse"
                   data-bs-parent="#qna"
                 >
-                  <div className="accordion-body">
+                  <div className="accordion-body text-white">
                     You can sponsor an event or suggest a formation in a topic
                     of your choice related to AI.
                   </div>
