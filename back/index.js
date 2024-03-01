@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 const db_uri = process.env.DB_URI;
 
 const corsOptions = {
-  origin: "*",
+  origin: "https://eaic.vercel.app/",
   credentials: true,
   optionsSuccessStatus: 200,
 };
@@ -103,6 +103,36 @@ app.get("/api/v1/blogs", async (req, res) => {
     res.status(200).json(blogs);
   } else {
     res.status(400).json({ message: "Error fetching blogs" });
+  }
+});
+
+// authenticate admin
+app.post("/api/v1/authenticate", async (req, res) => {
+  const admin = await schemas.Admin.findOne({
+    username: req.body.username,
+    password: req.body.password,
+  }).exec();
+
+  if (admin) {
+    res.status(200).json(admin);
+  } else {
+    res.status(400).json({ message: "Error authenticating" });
+  }
+});
+
+// get admin to check if authenticated
+app.get("/api/v1/admin", async (req, res) => {
+  const token = req.headers.authorization;
+  try {
+    const admin = await schemas.Admin.findById(token).exec();
+    if (admin) {
+      res.status(200).json(admin);
+    } else {
+      res.status(401).json({ message: "Unauthorized" });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(401).json({ message: "Unauthorized" });
   }
 });
 
