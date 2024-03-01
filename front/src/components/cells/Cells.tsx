@@ -69,8 +69,7 @@ const cells = [
 function Cells() {
   return (
     <>
-      <section className="section cells">
-        <div className="container">
+      <div className="container cells">
           <h2 className="text-center">Our Cells</h2>
           <div className="pills d-flex align-items-center px-lg-5 py-4 ">
             <div
@@ -119,7 +118,6 @@ function Cells() {
             </div>
           </div>
         </div>
-      </section>
     </>
   );
 }
