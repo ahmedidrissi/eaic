@@ -1,11 +1,14 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import img1 from "../../assets/ai_day_1.jfif";
-import img2 from "../../assets/ai_day_2.jfif";
-import img3 from "../../assets/ai_day_3.jfif";
-import img4 from "../../assets/data_competition_2024.png";
+import img1 from "../../assets/data_competition_v1.jfif";
+import img2 from "../../assets/ai_day_v1_1.jfif";
+// import img3 from "../../assets/ai_day_v1_2.jfif";
+// import img4 from "../../assets/ai_day_v1_3.jfif";
+// import img5 from "../../assets/data_competition_v2.png";
+import img6 from "../../assets/ai_day_v2.png";
 
-const imgList = [img1, img2, img3, img4];
+
+const imgList = [img1, img2, img6];
 
 function Events() {
   return (
