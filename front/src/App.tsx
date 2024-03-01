@@ -7,6 +7,7 @@ import Contact from "./components/contact/Contact";
 import Data from "./components/sessions/data/Data";
 import Training from "./components/sessions/training/Training";
 import MLOps from "./components/sessions/mlops/MLOps";
+import DCDonates from "./components/dcdonates/DCDonates";
 import NotFound from "./components/notfound/NotFound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/shared/scrolltotop/ScrollToTop";
@@ -35,6 +36,7 @@ function App() {
               <Route path="/data" element={<Data />} />
               <Route path="/training" element={<Training />} />
               <Route path="/mlops" element={<MLOps />} />
+              <Route path="/dcdonates" element={<DCDonates />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

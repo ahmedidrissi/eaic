@@ -1,4 +1,4 @@
-import logo1 from "../../assets/logos/DC_Donates_logo_regular.png";
+import logo1 from "../../assets/logos/DC_Donates_logo_inverted.png";
 import logo2 from "../../assets/logos/HPS_foundation.png";
 import logo3 from "../../assets/logos/Fondation_Dislog_Group.png";
 import logo4 from "../../assets/logos/SoGe.png";
@@ -14,7 +14,7 @@ function Sponsors() {
           <div className="col gy-4 d-flex justify-content-center align-items-center" key={index}>
             <div
               className="card p-4 d-flex justify-content-center align-items-center"
-              style={{ width: "250px", height: "100px" }}
+              style={{ width: "250px", height: "100px", backgroundColor: "var(--color-6)" }}
             >
               <img height={"100%"} src={img} />
             </div>
