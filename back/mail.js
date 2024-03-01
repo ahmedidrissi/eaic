@@ -77,7 +77,7 @@ exports.sendContactEmail = async ({ name, to, message }) => {
         />
       </a>
       </div>
-      <p style="text-align: center; font-size: 12px">© 2023 ENSIAS AI Club</p>
+      <p style="text-align: center; font-size: 12px">© 2024 ENSIAS AI Club</p>
       </div>
     </body>
   </html>`;
