@@ -100,16 +100,6 @@ function NavBar() {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className={
-                    currentPath == "/cells" ? "nav-link active" : "nav-link"
-                  }
-                  to={basePath + "cells"}
-                >
-                  Cells
-                </Link>
-              </li>
               <li className="nav-item dropdown">
                 <a
                   className={
