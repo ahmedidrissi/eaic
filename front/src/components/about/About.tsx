@@ -1,6 +1,7 @@
 import "./About.css";
 import Cells from "../cells/Cells";
 import Events from "../events/Events";
+import Sponsors from "../sponsors/Sponsors";
 
 function About() {
   return (
@@ -27,7 +28,8 @@ function About() {
           <Cells />
 
           <Events />
-          <h2 className="text-center">Q&A</h2>
+
+          <h2 className="text-center mt-4">Q&A</h2>
           <div className="container p-3 d-flex justify-content-center">
             <div className="accordion" id="qna">
               <div className="accordion-item mb-1">
@@ -103,6 +105,8 @@ function About() {
               </div>
             </div>
           </div>
+
+          <Sponsors />
         </div>
       </section>
     </>

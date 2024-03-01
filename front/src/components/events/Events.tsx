@@ -9,7 +9,7 @@ const imgList = [img1, img2, img3, img4];
 
 function Events() {
   return (
-    <div className="container">
+    <div className="container mt-4">
       <h2 className="text-center">Our Events</h2>
       <div className="container p-3 d-flex justify-content-center">
         <div

@@ -69,7 +69,7 @@ const cells = [
 function Cells() {
   return (
     <>
-      <div className="container cells">
+      <div className="container mt-4 cells">
           <h2 className="text-center">Our Cells</h2>
           <div className="pills d-flex align-items-center px-lg-5 py-4 ">
             <div
