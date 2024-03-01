@@ -27,8 +27,14 @@ const blogSchema = new Schema({
   tags: { type: [String], required: true },
 });
 
+const adminSchema = new Schema({
+  username: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+});
+
 const Sessions = mongoose.model("Sessions", sessionSchema, "sessions");
 const Analytics = mongoose.model("Analytics", analyticsSchema, "analytics");
 const Blogs = mongoose.model("Blogs", blogSchema, "blogs");
+const Admin = mongoose.model("Admin", adminSchema, "admin");
 
-module.exports = { Sessions, Analytics, Blogs };
+module.exports = { Sessions, Analytics, Blogs, Admin };
