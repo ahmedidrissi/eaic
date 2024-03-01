@@ -7,7 +7,7 @@ function Blogs() {
 
   useEffect(() => {
     useGetBlogs().then((blogs) => {
-      setBlogs(blogs);
+      setBlogs(blogs);      
     });
   }, []);
 
@@ -18,7 +18,7 @@ function Blogs() {
           <h2 className="text-center mb-5">Blogs</h2>
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-center">
             {blogs.map((blog: any) => (
-              <div className="col" key={blog.id}>
+              <div className="col" key={blog._id}>
                 <div className="card text-light">
                   <img
                     src={blog.image}
@@ -28,8 +28,8 @@ function Blogs() {
                   />
                   <div className="card-body">
                     <div className="tags py-2">
-                      {blog.tags.map((tag: any) => (
-                        <span className="badge py-2 me-2 mb-1" key={tag}>
+                      {blog.tags.map((tag: any, index: number) => (
+                        <span className="badge py-2 me-2 mb-1" key={index}>
                           {tag}
                         </span>
                       ))}
