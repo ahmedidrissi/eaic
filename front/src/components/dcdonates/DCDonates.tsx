@@ -13,7 +13,7 @@ function DCDonates() {
               style={{ textAlign: "justify", fontSize: "15pt" }}
             >
               ENSIAS AI Club is proud to announce its renewed partnership with
-              DataCamp. DataCamp is an online learning platform that offers
+              DataCamp Donates. DataCamp is an online learning platform that offers
               interactive courses in Python, R, and SQL. It is a great resource
               for students and professionals who want to learn data science and
               analytics. DataCamp has been a valuable partner for ENSIAS AI
