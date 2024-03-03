@@ -33,69 +33,136 @@ function DCDonates() {
             />
           </div>
         </div>
-        <div className="row gy-4 mt-3">
-          <div className="col-md-12 text-center px-5 d-flex justify-content-center">
-            <h4>
-              Do you want to learn data science and analytics? <br /> Apply for
-              a free DataCamp subscription now!
-            </h4>
-          </div>
-          <div className="col-md-12 gap-3 px-5 px-lg-0 d-flex flex-column flex-lg-row justify-content-center">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeCauY-fEMYWOEMKV8otxeph8WSMoyAsowTDFdsxBitNJtTOA/viewform"
-              target="_blank"
-              className="btn px-4 py-2"
+        <div className="row gy-4 mt-3 px-3">
+          <div className="col-md-3 d-flex justify-content-center align-items-center">
+            <div
+              className="card h-100 shadow-sm"
               style={{
-                fontSize: "16pt",
-                fontWeight: "bold",
-                backgroundColor: "var(--color-8)",
+                backgroundColor: "var(--color-6)",
                 color: "white",
+                borderTop: "5px solid var(--color-8)",
               }}
             >
-              Apply Now
-            </a>
-            <a
-              href="https://www.datacamp.com"
-              target="_blank"
-              className="btn px-4 py-2"
+              <div className="card-body">
+                <p
+                  className="card-text"
+                  style={{
+                    fontSize: "15pt",
+                    fontStyle: "italic",
+                  }}
+                >
+                  "Datacamp's platform has provided me with a seamless learning
+                  journey, enabling me to explore a wide array of subjects,
+                  ranging from Python programming to machine learning and
+                  beyond. The interactive learning environment, practical
+                  exercises, and courses led by experts have equipped me with
+                  the practical skills essential for excelling in the field of
+                  data science."
+                </p>
+              </div>
+              <div className="card-footer py-3">
+                <h6>- Adil, Head of Training Cell</h6>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6 d-flex justify-content-center align-items-center">
+            <div className="row">
+              <div className="col-md-12 mb-4 text-center px-5 d-flex justify-content-center">
+                <h4>
+                  Do you want to learn data science and analytics? <br /> Apply
+                  for a free DataCamp subscription now!
+                </h4>
+              </div>
+              <div className="col-md-12 gap-3 px-5 px-lg-0 d-flex flex-column flex-lg-row justify-content-center">
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeCauY-fEMYWOEMKV8otxeph8WSMoyAsowTDFdsxBitNJtTOA/viewform"
+                  target="_blank"
+                  className="btn px-4 py-2"
+                  style={{
+                    fontSize: "16pt",
+                    fontWeight: "bold",
+                    backgroundColor: "var(--color-8)",
+                    color: "white",
+                  }}
+                >
+                  Apply Now
+                </a>
+                <a
+                  href="https://www.datacamp.com"
+                  target="_blank"
+                  className="btn px-4 py-2"
+                  style={{
+                    fontSize: "16pt",
+                    fontWeight: "bold",
+                    backgroundColor: "none",
+                    border: "3px solid var(--color-8)",
+                    color: "white",
+                  }}
+                >
+                  Learn More
+                </a>
+              </div>
+              <div className="col-md-12">
+                <h5 className="text-center mt-5">What You Will Benefit From</h5>
+                <div className="row gy-3 px-4 py-3">
+                  <div className="col-md-12 d-flex justify-content-center align-items-center">
+                    <ul className="list-unstyled">
+                      <li>
+                        <i className="bi bi-check-circle text-success me-2"></i>
+                        440+ courses and 110+ Projects, each worth over $399 USD
+                      </li>
+                      <li>
+                        <i className="bi bi-check-circle text-success me-2"></i>
+                        Practice exercises to sharpen your skills
+                      </li>
+                      <li>
+                        <i className="bi bi-check-circle text-success me-2"></i>
+                        Assessments to test your knowledge on the subject matter
+                      </li>
+                      <li>
+                        <i className="bi bi-check-circle text-success me-2"></i>
+                        Projects that stem from real world queries
+                      </li>
+                      <li>
+                        <i className="bi bi-check-circle text-success me-2"></i>
+                        Access to extra features like Workspace, Certification,
+                        and Jobs
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-3 d-flex justify-content-center align-items-center">
+            <div
+              className="card h-100 shadow-sm"
               style={{
-                fontSize: "16pt",
-                fontWeight: "bold",
-                backgroundColor: "none",
-                border: "3px solid var(--color-8)",
+                backgroundColor: "var(--color-6)",
                 color: "white",
+                borderTop: "5px solid var(--color-8)",
               }}
             >
-              Learn More
-            </a>
-          </div>
-        </div>
-
-        <h5 className="text-center mt-5">What You Will Benefit From</h5>
-        <div className="row gy-3 px-4 py-3">
-          <div className="col-md-12 d-flex justify-content-center">
-            <ul className="list-unstyled">
-              <li>
-                <i className="bi bi-check-circle text-success me-2"></i>
-                440+ courses and 110+ Projects, each worth over $399 USD
-              </li>
-              <li>
-                <i className="bi bi-check-circle text-success me-2"></i>
-                Practice exercises to sharpen your skills
-              </li>
-              <li>
-                <i className="bi bi-check-circle text-success me-2"></i>
-                Assessments to test your knowledge on the subject matter
-              </li>
-              <li>
-                <i className="bi bi-check-circle text-success me-2"></i>
-                Projects that stem from real world queries
-              </li>
-              <li>
-                <i className="bi bi-check-circle text-success me-2"></i>
-                Access to extra features like Workspace, Certification, and Jobs
-              </li>
-            </ul>
+              <div className="card-body">
+                <p
+                  className="card-text"
+                  style={{
+                    fontSize: "15pt",
+                    fontStyle: "italic",
+                  }}
+                >
+                  "I would like to express my sincere gratitude to DataCamp for
+                  providing us with free access to an extensive array of courses
+                  and materials in the field of business intelligence and
+                  analytics engineering. As students, this support from DataCamp
+                  is making a real difference in our careers. So thank you
+                  DataCamp for your support!"
+                </p>
+              </div>
+              <div className="card-footer py-3">
+                <h6>- Sara, ENSIAS AI Club Member</h6>
+              </div>
+            </div>
           </div>
         </div>
 
