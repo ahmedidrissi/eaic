@@ -5,7 +5,7 @@ function DCDonates() {
   return (
     <section className="dcdonates">
       <div className="container">
-        <h2 className="text-center">DataCamp x ENSIAS AI Club</h2>
+        <h2 className="text-center">DC Donates x EAIC</h2>
         <div className="row px-4 py-3">
           <div className="col-md-8">
             <p
