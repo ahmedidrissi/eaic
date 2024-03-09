@@ -38,7 +38,6 @@ function App() {
               <Route path="/training" element={<Training />} />
               <Route path="/mlops" element={<MLOps />} />
               <Route path="/dcdonates" element={<DCDonates />} />
-              <Route path="/surprise" element={<Ramdan />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
